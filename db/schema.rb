@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_24_095922) do
+ActiveRecord::Schema.define(version: 2019_08_24_103411) do
+
+  create_table "customers", force: :cascade do |t|
+    t.string "customer_name"
+    t.string "contact_number"
+    t.string "email"
+    t.text "address"
+    t.date "date_of_birth"
+    t.date "date_of_anniversary"
+    t.string "picture"
+    t.string "profile"
+    t.integer "sales_person"
+    t.integer "store_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["store_id"], name: "index_customers_on_store_id"
+  end
 
   create_table "employees", force: :cascade do |t|
     t.string "employee_name"
@@ -22,7 +38,6 @@ ActiveRecord::Schema.define(version: 2019_08_24_095922) do
     t.integer "store_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["store_id"], name: "index_employees_on_store_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -41,5 +56,6 @@ ActiveRecord::Schema.define(version: 2019_08_24_095922) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "customers", "stores"
   add_foreign_key "employees", "stores"
 end
