@@ -15,3 +15,11 @@ Store.create!(
 
 	]
 	)
+
+Employee.create!(
+	[
+		{employee_name: "Vijay", mobile: "1234567890", password_digest: "vijay@123", role: "sales", email: "vijay@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Honore").id)},
+		{employee_name: "Ajay", mobile: "1234567890", password_digest: "ajay@123", role: "master", email: "vijay@gmail.com", aadhar_card_no: "xxx222xxx", store_id: (Store.find_by(store_name: "Honore").id)},
+		{employee_name: "Ravi", mobile: "1234567890", password_digest: "ravi@123", role: "account", email: "ravi@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Honore").id)}
+	]
+	)
