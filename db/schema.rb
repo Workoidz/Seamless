@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_24_103411) do
+ActiveRecord::Schema.define(version: 2019_08_25_075559) do
+
+  create_table "customer_measurements", force: :cascade do |t|
+    t.string "upper_body_back_shape"
+    t.string "upper_body_stomach"
+    t.string "upper_body_shoulder"
+    t.string "lower_body_posture"
+    t.integer "jacket_or_shirt_length"
+    t.integer "jacket_or_shirt_shoulder"
+    t.integer "jacket_or_shirt_sleeve_length"
+    t.integer "jacket_or_shirt_chest"
+    t.integer "jacket_or_shirt_waist"
+    t.integer "jacket_or_shirt_neck"
+    t.integer "jacket_or_shirt_hip"
+    t.integer "jacket_or_shirt_hale_back"
+    t.integer "jacket_or_shirt_cross_back"
+    t.integer "jacket_or_shirt_bicep"
+    t.integer "jacket_or_shirt_cross_front"
+    t.integer "jacket_or_shirt_arm_hole_round"
+    t.integer "trouser_length"
+    t.integer "trouser_crotch"
+    t.integer "trouser_inseam"
+    t.integer "trouser_waist"
+    t.integer "trouser_hip"
+    t.integer "trouser_knee"
+    t.integer "trouser_thigh"
+    t.integer "trouser_bottom"
+    t.integer "trouser_f_low"
+    t.integer "customer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_customer_measurements_on_customer_id"
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "customer_name"
@@ -56,6 +88,7 @@ ActiveRecord::Schema.define(version: 2019_08_24_103411) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "customer_measurements", "customers"
   add_foreign_key "customers", "stores"
   add_foreign_key "employees", "stores"
 end
