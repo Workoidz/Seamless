@@ -1,0 +1,57 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  upper_body_back_shape: MyString
+  upper_body_stomach: MyString
+  upper_body_shoulder: MyString
+  lower_body_posture: MyString
+  jacket_or_shirt_length: 1
+  jacket_or_shirt_shoulder: 1
+  jacket_or_shirt_sleeve_length: 1
+  jacket_or_shirt_chest: 1
+  jacket_or_shirt_waist: 1
+  jacket_or_shirt_neck: 1
+  jacket_or_shirt_hip: 1
+  jacket_or_shirt_hale_back: 1
+  jacket_or_shirt_cross_back: 1
+  jacket_or_shirt_bicep: 1
+  jacket_or_shirt_cross_front: 1
+  jacket_or_shirt_arm_hole_round: 1
+  trouser_length: 1
+  trouser_crotch: 1
+  trouser_inseam: 1
+  trouser_waist: 1
+  trouser_hip: 1
+  trouser_knee: 1
+  trouser_thigh: 1
+  trouser_bottom: 1
+  trouser_f_low: 1
+  order: one
+
+two:
+  upper_body_back_shape: MyString
+  upper_body_stomach: MyString
+  upper_body_shoulder: MyString
+  lower_body_posture: MyString
+  jacket_or_shirt_length: 1
+  jacket_or_shirt_shoulder: 1
+  jacket_or_shirt_sleeve_length: 1
+  jacket_or_shirt_chest: 1
+  jacket_or_shirt_waist: 1
+  jacket_or_shirt_neck: 1
+  jacket_or_shirt_hip: 1
+  jacket_or_shirt_hale_back: 1
+  jacket_or_shirt_cross_back: 1
+  jacket_or_shirt_bicep: 1
+  jacket_or_shirt_cross_front: 1
+  jacket_or_shirt_arm_hole_round: 1
+  trouser_length: 1
+  trouser_crotch: 1
+  trouser_inseam: 1
+  trouser_waist: 1
+  trouser_hip: 1
+  trouser_knee: 1
+  trouser_thigh: 1
+  trouser_bottom: 1
+  trouser_f_low: 1
+  order: two

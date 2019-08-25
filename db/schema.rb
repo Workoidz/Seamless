@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_25_083954) do
+ActiveRecord::Schema.define(version: 2019_08_25_134333) do
 
   create_table "customer_measurements", force: :cascade do |t|
     t.string "upper_body_back_shape"
@@ -72,6 +72,38 @@ ActiveRecord::Schema.define(version: 2019_08_25_083954) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "order_measurements", force: :cascade do |t|
+    t.string "upper_body_back_shape"
+    t.string "upper_body_stomach"
+    t.string "upper_body_shoulder"
+    t.string "lower_body_posture"
+    t.integer "jacket_or_shirt_length"
+    t.integer "jacket_or_shirt_shoulder"
+    t.integer "jacket_or_shirt_sleeve_length"
+    t.integer "jacket_or_shirt_chest"
+    t.integer "jacket_or_shirt_waist"
+    t.integer "jacket_or_shirt_neck"
+    t.integer "jacket_or_shirt_hip"
+    t.integer "jacket_or_shirt_hale_back"
+    t.integer "jacket_or_shirt_cross_back"
+    t.integer "jacket_or_shirt_bicep"
+    t.integer "jacket_or_shirt_cross_front"
+    t.integer "jacket_or_shirt_arm_hole_round"
+    t.integer "trouser_length"
+    t.integer "trouser_crotch"
+    t.integer "trouser_inseam"
+    t.integer "trouser_waist"
+    t.integer "trouser_hip"
+    t.integer "trouser_knee"
+    t.integer "trouser_thigh"
+    t.integer "trouser_bottom"
+    t.integer "trouser_f_low"
+    t.integer "order_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_order_measurements_on_order_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.date "order_date"
     t.date "trail_date"
@@ -112,5 +144,6 @@ ActiveRecord::Schema.define(version: 2019_08_25_083954) do
   add_foreign_key "customer_measurements", "customers"
   add_foreign_key "customers", "stores"
   add_foreign_key "employees", "stores"
+  add_foreign_key "order_measurements", "orders"
   add_foreign_key "orders", "customers"
 end
