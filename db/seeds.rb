@@ -50,4 +50,20 @@ CustomerMeasurement.create!(
 	]
 	)
 
+Order.create!(
+	[
+		{order_date: Date.today, trail_date: Date.today + 5, trail_status: "Not Done", delivery_date: Date.today + 15, delivery_status: "Not Done", remark: "we treat it well", stitching_cost: 10000, fabric_cost: 20000, stitching_advance: 3000, master_allocated: Store.find_by(store_name: "Honore").employees.second.id, customer_id: (Store.find_by(store_name: "Honore").customers.first.id)},
+		{order_date: Date.today, trail_date: Date.today + 5, trail_status: "Not Done", delivery_date: Date.today + 15, delivery_status: "Not Done", remark: "we treat it well", stitching_cost: 10000, fabric_cost: 20000, stitching_advance: 3000, master_allocated: Store.find_by(store_name: "Honore").employees.second.id, customer_id: (Store.find_by(store_name: "Honore").customers.first.id)},
+		{order_date: Date.today, trail_date: Date.today + 5, trail_status: "Not Done", delivery_date: Date.today + 15, delivery_status: "Not Done", remark: "we treat it well", stitching_cost: 10000, fabric_cost: 20000, stitching_advance: 3000, master_allocated: Store.find_by(store_name: "Honore").employees.second.id, customer_id: (Store.find_by(store_name: "Honore").customers.last.id)},
+		{order_date: Date.today, trail_date: Date.today + 5, trail_status: "Not Done", delivery_date: Date.today + 15, delivery_status: "Not Done", remark: "we treat it well", stitching_cost: 10000, fabric_cost: 20000, stitching_advance: 3000, master_allocated: Store.find_by(store_name: "Diwan Sahib").employees.second.id, customer_id: (Store.find_by(store_name: "Diwan Sahib").customers.second.id)},
+		{order_date: Date.today, trail_date: Date.today + 5, trail_status: "Not Done", delivery_date: Date.today + 15, delivery_status: "Not Done", remark: "we treat it well", stitching_cost: 10000, fabric_cost: 20000, stitching_advance: 3000, master_allocated: Store.find_by(store_name: "Diwan Sahib").employees.second.id, customer_id: (Store.find_by(store_name: "Diwan Sahib").customers.last.id)},
+		{order_date: Date.today, trail_date: Date.today + 5, trail_status: "Not Done", delivery_date: Date.today + 15, delivery_status: "Not Done", remark: "we treat it well", stitching_cost: 10000, fabric_cost: 20000, stitching_advance: 3000, master_allocated: Store.find_by(store_name: "Diwan Sahib").employees.second.id, customer_id: (Store.find_by(store_name: "Diwan Sahib").customers.last.id)},
+		{order_date: Date.today, trail_date: Date.today + 5, trail_status: "Not Done", delivery_date: Date.today + 15, delivery_status: "Not Done", remark: "we treat it well", stitching_cost: 10000, fabric_cost: 20000, stitching_advance: 3000, master_allocated: Store.find_by(store_name: "Diwan Sahib").employees.second.id, customer_id: (Store.find_by(store_name: "Diwan Sahib").customers.last.id)}
+	]
+	)
+
+
+
+
+
 

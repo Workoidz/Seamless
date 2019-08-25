@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_date: 2019-08-25
+  trail_date: 2019-08-25
+  trail_status: MyString
+  delivery_date: 2019-08-25
+  delivery_status: MyString
+  order_pictures: MyString
+  trail_pictures: MyString
+  remark: MyText
+  stitching_cost: 1
+  fabric_cost: 1
+  stitching_advance: 1
+  fabric_advance: 1
+  balance_clear_status: MyString
+  master_allocated: 1
+  customer: one
+
+two:
+  order_date: 2019-08-25
+  trail_date: 2019-08-25
+  trail_status: MyString
+  delivery_date: 2019-08-25
+  delivery_status: MyString
+  order_pictures: MyString
+  trail_pictures: MyString
+  remark: MyText
+  stitching_cost: 1
+  fabric_cost: 1
+  stitching_advance: 1
+  fabric_advance: 1
+  balance_clear_status: MyString
+  master_allocated: 1
+  customer: two

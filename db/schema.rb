@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_25_075559) do
+ActiveRecord::Schema.define(version: 2019_08_25_083954) do
 
   create_table "customer_measurements", force: :cascade do |t|
     t.string "upper_body_back_shape"
@@ -72,6 +72,27 @@ ActiveRecord::Schema.define(version: 2019_08_25_075559) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.date "order_date"
+    t.date "trail_date"
+    t.string "trail_status"
+    t.date "delivery_date"
+    t.string "delivery_status"
+    t.string "order_pictures"
+    t.string "trail_pictures"
+    t.text "remark"
+    t.integer "stitching_cost"
+    t.integer "fabric_cost"
+    t.integer "stitching_advance"
+    t.integer "fabric_advance"
+    t.string "balance_clear_status"
+    t.integer "master_allocated"
+    t.integer "customer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
+  end
+
   create_table "stores", force: :cascade do |t|
     t.string "store_name"
     t.string "contact_person_name"
@@ -91,4 +112,5 @@ ActiveRecord::Schema.define(version: 2019_08_25_075559) do
   add_foreign_key "customer_measurements", "customers"
   add_foreign_key "customers", "stores"
   add_foreign_key "employees", "stores"
+  add_foreign_key "orders", "customers"
 end
