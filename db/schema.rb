@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_25_134333) do
+ActiveRecord::Schema.define(version: 2019_08_26_084041) do
 
   create_table "customer_measurements", force: :cascade do |t|
     t.string "upper_body_back_shape"
@@ -125,6 +125,24 @@ ActiveRecord::Schema.define(version: 2019_08_25_134333) do
     t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
 
+  create_table "shirt_styles", force: :cascade do |t|
+    t.text "style_for"
+    t.string "style_for_fabric_picture"
+    t.string "style"
+    t.string "lapel"
+    t.string "vent"
+    t.string "pocket"
+    t.string "fit"
+    t.string "sleeve_placket"
+    t.string "front_cut"
+    t.string "related_pictures"
+    t.string "master_comment"
+    t.integer "order_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_shirt_styles_on_order_id"
+  end
+
   create_table "stores", force: :cascade do |t|
     t.string "store_name"
     t.string "contact_person_name"
@@ -146,4 +164,5 @@ ActiveRecord::Schema.define(version: 2019_08_25_134333) do
   add_foreign_key "employees", "stores"
   add_foreign_key "order_measurements", "orders"
   add_foreign_key "orders", "customers"
+  add_foreign_key "shirt_styles", "orders"
 end

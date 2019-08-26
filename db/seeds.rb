@@ -74,6 +74,18 @@ OrderMeasurement.create!(
 	]
 	)
 
+ShirtStyle.create!(
+	[
+		{style_for: "Black linen", style: "SB_Button", lapel: "Peak", vent: "Side Vent", pocket: "Slant", fit: "Slim Fit", sleeve_placket: "Vent", front_cut: "Round", master_comment: "Use white Thread, with lining", order_id: (Store.find_by(store_name: "Diwan Sahib").customers.second.orders.first.id)},
+		{style_for: "White Cotton", style: "SB_Button", lapel: "Peak", vent: "Side Vent", pocket: "Slant", fit: "Slim Fit", sleeve_placket: "Vent", front_cut: "Round", master_comment: "Use white Thread, with lining", order_id: (Store.find_by(store_name: "Diwan Sahib").customers.second.orders.first.id)},
+		{style_for: "Black linen", style: "SB_Button", lapel: "Peak", vent: "Side Vent", pocket: "Slant", fit: "Slim Fit", sleeve_placket: "Vent", front_cut: "Round", master_comment: "Use white Thread, with lining", order_id: (Store.find_by(store_name: "Diwan Sahib").customers.third.orders.first.id)},
+		{style_for: "Black linen", style: "SB_Button", lapel: "Peak", vent: "Side Vent", pocket: "Slant", fit: "Slim Fit", sleeve_placket: "Vent", front_cut: "Round", master_comment: "Use white Thread, with lining", order_id: (Store.find_by(store_name: "Diwan Sahib").customers.third.orders.second.id)},
+		{style_for: "Black linen", style: "SB_Button", lapel: "Peak", vent: "Side Vent", pocket: "Slant", fit: "Slim Fit", sleeve_placket: "Vent", front_cut: "Round", master_comment: "Use white Thread, with lining", order_id: (Store.find_by(store_name: "Diwan Sahib").customers.third.orders.third.id)},
+		{style_for: "Black linen", style: "SB_Button", lapel: "Peak", vent: "Side Vent", pocket: "Slant", fit: "Slim Fit", sleeve_placket: "Vent", front_cut: "Round", master_comment: "Use white Thread, with lining", order_id: (Store.find_by(store_name: "Honore").customers.first.orders.first.id)},
+		{style_for: "Black linen", style: "SB_Button", lapel: "Peak", vent: "Side Vent", pocket: "Slant", fit: "Slim Fit", sleeve_placket: "Vent", front_cut: "Round", master_comment: "Use white Thread, with lining", order_id: (Store.find_by(store_name: "Honore").customers.third.orders.first.id)}
+	]
+	)
+
 
 
 
