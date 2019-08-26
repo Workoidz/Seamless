@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  style_for: MyText
+  style_for_fabric_picture: MyString
+  belt: MyString
+  pleat: MyString
+  pocket: MyString
+  back_pocket: MyString
+  bottom: MyString
+  loops: MyString
+  fit: MyString
+  related_pictures: MyString
+  master_comment: MyString
+  order: one
+
+two:
+  style_for: MyText
+  style_for_fabric_picture: MyString
+  belt: MyString
+  pleat: MyString
+  pocket: MyString
+  back_pocket: MyString
+  bottom: MyString
+  loops: MyString
+  fit: MyString
+  related_pictures: MyString
+  master_comment: MyString
+  order: two

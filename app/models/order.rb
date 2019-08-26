@@ -3,5 +3,6 @@ class Order < ApplicationRecord
 
   has_one :order_measurement, dependent: :destroy
   has_many :shirt_styles, dependent: :destroy
+  has_many :trouser_styles, dependent: :destroy
 
 end

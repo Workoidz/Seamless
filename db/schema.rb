@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_084041) do
+ActiveRecord::Schema.define(version: 2019_08_26_123739) do
 
   create_table "customer_measurements", force: :cascade do |t|
     t.string "upper_body_back_shape"
@@ -159,10 +159,29 @@ ActiveRecord::Schema.define(version: 2019_08_26_084041) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "trouser_styles", force: :cascade do |t|
+    t.text "style_for"
+    t.string "style_for_fabric_picture"
+    t.string "belt"
+    t.string "pleat"
+    t.string "pocket"
+    t.string "back_pocket"
+    t.string "bottom"
+    t.string "loops"
+    t.string "fit"
+    t.string "related_pictures"
+    t.string "master_comment"
+    t.integer "order_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_trouser_styles_on_order_id"
+  end
+
   add_foreign_key "customer_measurements", "customers"
   add_foreign_key "customers", "stores"
   add_foreign_key "employees", "stores"
   add_foreign_key "order_measurements", "orders"
   add_foreign_key "orders", "customers"
   add_foreign_key "shirt_styles", "orders"
+  add_foreign_key "trouser_styles", "orders"
 end

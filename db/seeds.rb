@@ -86,6 +86,16 @@ ShirtStyle.create!(
 	]
 	)
 
+TrouserStyle.create!(
+	[
+		{style_for: "Blue wool", belt: "Long", pleat: "Flat", pocket: "Cross", back_pocket: "2 Pockets", bottom: "Slant + Flap", loops: "One", fit: "Slim", master_comment: "Keep it office wear", order_id: (Store.find_by(store_name: "Diwan Sahib").customers.second.orders.first.id)},
+		{style_for: "Blue wool", belt: "Long", pleat: "Flat", pocket: "Cross", back_pocket: "2 Pockets", bottom: "Slant + Flap", loops: "One", fit: "Slim", master_comment: "Keep it office wear", order_id: (Store.find_by(store_name: "Diwan Sahib").customers.third.orders.first.id)},
+		{style_for: "Blue wool", belt: "Long", pleat: "Flat", pocket: "Cross", back_pocket: "2 Pockets", bottom: "Slant + Flap", loops: "One", fit: "Slim", master_comment: "Keep it office wear", order_id: (Store.find_by(store_name: "Honore").customers.first.orders.second.id)},
+		{style_for: "Blue wool", belt: "Long", pleat: "Flat", pocket: "Cross", back_pocket: "2 Pockets", bottom: "Slant + Flap", loops: "One", fit: "Slim", master_comment: "Keep it office wear", order_id: (Store.find_by(store_name: "Honore").customers.first.orders.second.id)},
+		{style_for: "Blue wool", belt: "Long", pleat: "Flat", pocket: "Cross", back_pocket: "2 Pockets", bottom: "Slant + Flap", loops: "One", fit: "Slim", master_comment: "Keep it office wear", order_id: (Store.find_by(store_name: "Honore").customers.third.orders.first.id)}
+	]
+	)
+
 
 
 
