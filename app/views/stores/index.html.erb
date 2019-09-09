@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Store name</th>
+      <th>Contact person name</th>
+      <th>Address</th>
+      <th>Contact number</th>
+      <th>Email</th>
+      <th>Facebook link</th>
+      <th>Whatsapp number</th>
+      <th>Youtube link</th>
+      <th>Instagram link</th>
+      <th>Website</th>
+      <th>Logo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.store_name %></td>
+        <td><%= store.contact_person_name %></td>
+        <td><%= store.address %></td>
+        <td><%= store.contact_number %></td>
+        <td><%= store.email %></td>
+        <td><%= store.facebook_link %></td>
+        <td><%= store.whatsapp_number %></td>
+        <td><%= store.youtube_link %></td>
+        <td><%= store.instagram_link %></td>
+        <td><%= store.website %></td>
+        <td><%= store.logo %></td>
+        <td><%= link_to 'Show', store %></td>
+        <td><%= link_to 'Edit', edit_store_path(store) %></td>
+        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Store', new_store_path %>
