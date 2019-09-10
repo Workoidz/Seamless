@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer name:</strong>
+  <%= @customer.customer_name %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @customer.contact_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @customer.date_of_birth %>
+</p>
+
+<p>
+  <strong>Date of anniversary:</strong>
+  <%= @customer.date_of_anniversary %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @customer.picture %>
+</p>
+
+<p>
+  <strong>Sales person:</strong>
+  <%= @customer.sales_person %>
+</p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @customer.store_id %>
+</p>
+
+<%= link_to 'Edit', edit_store_customer_path(@store,@customer) %> |
+<%= link_to 'Back', store_customers_path(@store) %>

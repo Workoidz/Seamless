@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer name</th>
+      <th>Contact number</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Date of birth</th>
+      <th>Date of anniversary</th>
+      <th>Picture</th>
+      <th>Sales person</th>
+      <th>Store</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.customer_name %></td>
+        <td><%= customer.contact_number %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.address %></td>
+        <td><%= customer.date_of_birth %></td>
+        <td><%= customer.date_of_anniversary %></td>
+        <td><%= customer.picture %></td>
+        <td><%= customer.sales_person %></td>
+        <td><%= customer.store_id %></td>
+        <td><%= link_to 'Show', store_customer_path(@store,customer) %></td>
+        <td><%= link_to 'Edit', edit_store_customer_path(@store,customer) %></td>
+        <td><%= link_to 'Destroy', [@store,customer], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer', new_store_customer_path %>

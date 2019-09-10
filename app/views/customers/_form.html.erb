@@ -1,0 +1,62 @@
+<%= form_with(model: [@store,@customer], local: true) do |form| %>
+  <% if customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+        <% customer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :customer_name %>
+    <%= form.text_field :customer_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_number %>
+    <%= form.text_field :contact_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_area :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth %>
+    <%= form.date_select :date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_anniversary %>
+    <%= form.date_select :date_of_anniversary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sales_person %>
+    <%= form.number_field :sales_person %>
+  </div>
+
+  <div class="field">
+    <%= form.label :store_id %>
+    <%= form.text_field :store_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

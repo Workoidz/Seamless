@@ -23,7 +23,7 @@
   <tbody>
     <% @stores.each do |store| %>
       <tr>
-        <td><%= store.store_name %></td>
+        <td><%= link_to store.store_name, store_customers_path(store) %></td>
         <td><%= store.contact_person_name %></td>
         <td><%= store.address %></td>
         <td><%= store.contact_number %></td>
