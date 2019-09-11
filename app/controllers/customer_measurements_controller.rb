@@ -6,9 +6,6 @@ class CustomerMeasurementsController < ApplicationController
   # GET /customer_measurements.json
   def index
     @customer_measurements = @customer.customer_measurement
-    if @customer_measurements == nil then
-    #  redirect_to new_store_customer_customer_measurement_path(@store,@customer)
-    end
   end
 
   # GET /customer_measurements/1
@@ -19,7 +16,7 @@ class CustomerMeasurementsController < ApplicationController
   # GET /customer_measurements/new
   def new
     @customer_measurement = CustomerMeasurement.new
-   @customer.customer_measurement = @customer_measurement
+    @customer.customer_measurement = @customer_measurement
   end
 
   # GET /customer_measurements/1/edit

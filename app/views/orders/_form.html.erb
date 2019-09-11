@@ -1,0 +1,92 @@
+<%= form_with(model: [@store,@customer,@order], local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :order_date %>
+    <%= form.date_select :order_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trail_date %>
+    <%= form.date_select :trail_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trail_status %>
+    <%= form.text_field :trail_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_date %>
+    <%= form.date_select :delivery_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_status %>
+    <%= form.text_field :delivery_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order_pictures %>
+    <%= form.text_field :order_pictures %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trail_pictures %>
+    <%= form.text_field :trail_pictures %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remark %>
+    <%= form.text_area :remark %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stitching_cost %>
+    <%= form.number_field :stitching_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fabric_cost %>
+    <%= form.number_field :fabric_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stitching_advance %>
+    <%= form.number_field :stitching_advance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fabric_advance %>
+    <%= form.number_field :fabric_advance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :balance_clear_status %>
+    <%= form.text_field :balance_clear_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :master_allocated %>
+    <%= form.number_field :master_allocated %>
+  </div>
+
+  <div class="field">
+    <%= form.label :customer_id %>
+    <%= form.text_field :customer_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,71 @@
+require "application_system_test_case"
+
+class OrdersTest < ApplicationSystemTestCase
+  setup do
+    @order = orders(:one)
+  end
+
+  test "visiting the index" do
+    visit orders_url
+    assert_selector "h1", text: "Orders"
+  end
+
+  test "creating a Order" do
+    visit orders_url
+    click_on "New Order"
+
+    fill_in "Balance clear status", with: @order.balance_clear_status
+    fill_in "Customer", with: @order.customer_id
+    fill_in "Delivery date", with: @order.delivery_date
+    fill_in "Delivery status", with: @order.delivery_status
+    fill_in "Fabric advance", with: @order.fabric_advance
+    fill_in "Fabric cost", with: @order.fabric_cost
+    fill_in "Master allocated", with: @order.master_allocated
+    fill_in "Order date", with: @order.order_date
+    fill_in "Order pictures", with: @order.order_pictures
+    fill_in "Remark", with: @order.remark
+    fill_in "Stitching advance", with: @order.stitching_advance
+    fill_in "Stitching cost", with: @order.stitching_cost
+    fill_in "Trail date", with: @order.trail_date
+    fill_in "Trail pictures", with: @order.trail_pictures
+    fill_in "Trail status", with: @order.trail_status
+    click_on "Create Order"
+
+    assert_text "Order was successfully created"
+    click_on "Back"
+  end
+
+  test "updating a Order" do
+    visit orders_url
+    click_on "Edit", match: :first
+
+    fill_in "Balance clear status", with: @order.balance_clear_status
+    fill_in "Customer", with: @order.customer_id
+    fill_in "Delivery date", with: @order.delivery_date
+    fill_in "Delivery status", with: @order.delivery_status
+    fill_in "Fabric advance", with: @order.fabric_advance
+    fill_in "Fabric cost", with: @order.fabric_cost
+    fill_in "Master allocated", with: @order.master_allocated
+    fill_in "Order date", with: @order.order_date
+    fill_in "Order pictures", with: @order.order_pictures
+    fill_in "Remark", with: @order.remark
+    fill_in "Stitching advance", with: @order.stitching_advance
+    fill_in "Stitching cost", with: @order.stitching_cost
+    fill_in "Trail date", with: @order.trail_date
+    fill_in "Trail pictures", with: @order.trail_pictures
+    fill_in "Trail status", with: @order.trail_status
+    click_on "Update Order"
+
+    assert_text "Order was successfully updated"
+    click_on "Back"
+  end
+
+  test "destroying a Order" do
+    visit orders_url
+    page.accept_confirm do
+      click_on "Destroy", match: :first
+    end
+
+    assert_text "Order was successfully destroyed"
+  end
+end

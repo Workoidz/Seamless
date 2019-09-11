@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order date</th>
+      <th>Trail date</th>
+      <th>Trail status</th>
+      <th>Delivery date</th>
+      <th>Delivery status</th>
+      <th>Order pictures</th>
+      <th>Trail pictures</th>
+      <th>Remark</th>
+      <th>Stitching cost</th>
+      <th>Fabric cost</th>
+      <th>Stitching advance</th>
+      <th>Fabric advance</th>
+      <th>Balance clear status</th>
+      <th>Master allocated</th>
+      <th>Customer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.order_date %></td>
+        <td><%= order.trail_date %></td>
+        <td><%= order.trail_status %></td>
+        <td><%= order.delivery_date %></td>
+        <td><%= order.delivery_status %></td>
+        <td><%= order.order_pictures %></td>
+        <td><%= order.trail_pictures %></td>
+        <td><%= order.remark %></td>
+        <td><%= order.stitching_cost %></td>
+        <td><%= order.fabric_cost %></td>
+        <td><%= order.stitching_advance %></td>
+        <td><%= order.fabric_advance %></td>
+        <td><%= order.balance_clear_status %></td>
+        <td><%= order.master_allocated %></td>
+        <td><%= order.customer_id %></td>
+        <td><%= link_to 'Show', store_customer_order_path(@store,@customer,order) %></td>
+        <td><%= link_to 'Edit', edit_store_customer_order_path(@store,@customer,order) %></td>
+        <td><%= link_to 'Destroy', [@store,@customer,order], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_store_customer_order_path(@store,@customer) %>
