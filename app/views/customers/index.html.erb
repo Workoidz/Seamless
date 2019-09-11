@@ -33,6 +33,7 @@
         <td><%= link_to 'Show', store_customer_path(@store,customer) %></td>
         <td><%= link_to 'Edit', edit_store_customer_path(@store,customer) %></td>
         <td><%= link_to 'Destroy', [@store,customer], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Measurement', store_customer_customer_measurements_path(@store,customer) %></td>
       </tr>
     <% end %>
   </tbody>
