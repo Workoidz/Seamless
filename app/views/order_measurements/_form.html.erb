@@ -1,0 +1,147 @@
+<%= form_with(model: [@store,@customer,@order,order_measurement], local: true) do |form| %>
+  <% if order_measurement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order_measurement.errors.count, "error") %> prohibited this order_measurement from being saved:</h2>
+
+      <ul>
+        <% order_measurement.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :upper_body_back_shape %>
+    <%= form.text_field :upper_body_back_shape %>
+  </div>
+
+  <div class="field">
+    <%= form.label :upper_body_stomach %>
+    <%= form.text_field :upper_body_stomach %>
+  </div>
+
+  <div class="field">
+    <%= form.label :upper_body_shoulder %>
+    <%= form.text_field :upper_body_shoulder %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lower_body_posture %>
+    <%= form.text_field :lower_body_posture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_length %>
+    <%= form.text_field :jacket_or_shirt_length %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_shoulder %>
+    <%= form.text_field :jacket_or_shirt_shoulder %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_sleeve_length %>
+    <%= form.text_field :jacket_or_shirt_sleeve_length %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_chest %>
+    <%= form.text_field :jacket_or_shirt_chest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_waist %>
+    <%= form.text_field :jacket_or_shirt_waist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_neck %>
+    <%= form.text_field :jacket_or_shirt_neck %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_hip %>
+    <%= form.text_field :jacket_or_shirt_hip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_hale_back %>
+    <%= form.text_field :jacket_or_shirt_hale_back %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_cross_back %>
+    <%= form.text_field :jacket_or_shirt_cross_back %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_bicep %>
+    <%= form.text_field :jacket_or_shirt_bicep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_cross_front %>
+    <%= form.text_field :jacket_or_shirt_cross_front %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jacket_or_shirt_arm_hole_round %>
+    <%= form.text_field :jacket_or_shirt_arm_hole_round %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_length %>
+    <%= form.text_field :trouser_length %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_crotch %>
+    <%= form.text_field :trouser_crotch %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_inseam %>
+    <%= form.text_field :trouser_inseam %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_waist %>
+    <%= form.text_field :trouser_waist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_hip %>
+    <%= form.text_field :trouser_hip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_knee %>
+    <%= form.text_field :trouser_knee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_thigh %>
+    <%= form.text_field :trouser_thigh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_bottom %>
+    <%= form.text_field :trouser_bottom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trouser_f_low %>
+    <%= form.text_field :trouser_f_low %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order_id %>
+    <%= form.text_field :order_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -4,7 +4,12 @@ Rails.application.routes.draw do
 resources :stores do
 	resources :customers do
 		resources :customer_measurements
-		resources :orders
+		
+		resources :orders do
+			resources :order_measurements
+		
+		end
+	
 	end
 end
 

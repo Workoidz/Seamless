@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Order Measurements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Upper body back shape</th>
+      <th>Upper body stomach</th>
+      <th>Upper body shoulder</th>
+      <th>Lower body posture</th>
+      <th>Jacket or shirt length</th>
+      <th>Jacket or shirt shoulder</th>
+      <th>Jacket or shirt sleeve length</th>
+      <th>Jacket or shirt chest</th>
+      <th>Jacket or shirt waist</th>
+      <th>Jacket or shirt neck</th>
+      <th>Jacket or shirt hip</th>
+      <th>Jacket or shirt hale back</th>
+      <th>Jacket or shirt cross back</th>
+      <th>Jacket or shirt bicep</th>
+      <th>Jacket or shirt cross front</th>
+      <th>Jacket or shirt arm hole round</th>
+      <th>Trouser length</th>
+      <th>Trouser crotch</th>
+      <th>Trouser inseam</th>
+      <th>Trouser waist</th>
+      <th>Trouser hip</th>
+      <th>Trouser knee</th>
+      <th>Trouser thigh</th>
+      <th>Trouser bottom</th>
+      <th>Trouser f low</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order_measurements.each do |order_measurement| %>
+      <tr>
+        <td><%= order_measurement.upper_body_back_shape %></td>
+        <td><%= order_measurement.upper_body_stomach %></td>
+        <td><%= order_measurement.upper_body_shoulder %></td>
+        <td><%= order_measurement.lower_body_posture %></td>
+        <td><%= order_measurement.jacket_or_shirt_length %></td>
+        <td><%= order_measurement.jacket_or_shirt_shoulder %></td>
+        <td><%= order_measurement.jacket_or_shirt_sleeve_length %></td>
+        <td><%= order_measurement.jacket_or_shirt_chest %></td>
+        <td><%= order_measurement.jacket_or_shirt_waist %></td>
+        <td><%= order_measurement.jacket_or_shirt_neck %></td>
+        <td><%= order_measurement.jacket_or_shirt_hip %></td>
+        <td><%= order_measurement.jacket_or_shirt_hale_back %></td>
+        <td><%= order_measurement.jacket_or_shirt_cross_back %></td>
+        <td><%= order_measurement.jacket_or_shirt_bicep %></td>
+        <td><%= order_measurement.jacket_or_shirt_cross_front %></td>
+        <td><%= order_measurement.jacket_or_shirt_arm_hole_round %></td>
+        <td><%= order_measurement.trouser_length %></td>
+        <td><%= order_measurement.trouser_crotch %></td>
+        <td><%= order_measurement.trouser_inseam %></td>
+        <td><%= order_measurement.trouser_waist %></td>
+        <td><%= order_measurement.trouser_hip %></td>
+        <td><%= order_measurement.trouser_knee %></td>
+        <td><%= order_measurement.trouser_thigh %></td>
+        <td><%= order_measurement.trouser_bottom %></td>
+        <td><%= order_measurement.trouser_f_low %></td>
+        <td><%= order_measurement.order_id %></td>
+        <td><%= link_to 'Show', order_measurement %></td>
+        <td><%= link_to 'Edit', edit_order_measurement_path(order_measurement) %></td>
+        <td><%= link_to 'Destroy', order_measurement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order Measurement', new_order_measurement_path %>

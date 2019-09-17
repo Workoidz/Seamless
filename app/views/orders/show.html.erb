@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Order No. --> <%= @order.id %></h1>
 <p>
   <strong>Order date:</strong>
   <%= @order.order_date %>
@@ -67,3 +67,10 @@
 
 <%= link_to 'Edit', edit_store_customer_order_path(@store,@customer,@order) %> |
 <%= link_to 'Back', store_customer_orders_path(@store,@customer) %>
+
+<% if @order.order_measurement == nil %>
+<h1> <%= link_to 'Kindly add Body Posture & Measurements..!', new_store_customer_order_order_measurement_path(@store,@customer,@order) %> </h1>
+<% else %>
+<%= render @order.order_measurement %>
+
+<% end %>
