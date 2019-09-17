@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_10_101923) do
+ActiveRecord::Schema.define(version: 2019_09_17_080632) do
 
   create_table "customer_measurements", force: :cascade do |t|
     t.string "upper_body_back_shape"
@@ -77,27 +77,27 @@ ActiveRecord::Schema.define(version: 2019_09_10_101923) do
     t.string "upper_body_stomach"
     t.string "upper_body_shoulder"
     t.string "lower_body_posture"
-    t.integer "jacket_or_shirt_length"
-    t.integer "jacket_or_shirt_shoulder"
-    t.integer "jacket_or_shirt_sleeve_length"
-    t.integer "jacket_or_shirt_chest"
-    t.integer "jacket_or_shirt_waist"
-    t.integer "jacket_or_shirt_neck"
-    t.integer "jacket_or_shirt_hip"
-    t.integer "jacket_or_shirt_hale_back"
-    t.integer "jacket_or_shirt_cross_back"
-    t.integer "jacket_or_shirt_bicep"
-    t.integer "jacket_or_shirt_cross_front"
-    t.integer "jacket_or_shirt_arm_hole_round"
-    t.integer "trouser_length"
-    t.integer "trouser_crotch"
-    t.integer "trouser_inseam"
-    t.integer "trouser_waist"
-    t.integer "trouser_hip"
-    t.integer "trouser_knee"
-    t.integer "trouser_thigh"
-    t.integer "trouser_bottom"
-    t.integer "trouser_f_low"
+    t.decimal "jacket_or_shirt_length"
+    t.decimal "jacket_or_shirt_shoulder"
+    t.decimal "jacket_or_shirt_sleeve_length"
+    t.decimal "jacket_or_shirt_chest"
+    t.decimal "jacket_or_shirt_waist"
+    t.decimal "jacket_or_shirt_neck"
+    t.decimal "jacket_or_shirt_hip"
+    t.decimal "jacket_or_shirt_hale_back"
+    t.decimal "jacket_or_shirt_cross_back"
+    t.decimal "jacket_or_shirt_bicep"
+    t.decimal "jacket_or_shirt_cross_front"
+    t.decimal "jacket_or_shirt_arm_hole_round"
+    t.decimal "trouser_length"
+    t.decimal "trouser_crotch"
+    t.decimal "trouser_inseam"
+    t.decimal "trouser_waist"
+    t.decimal "trouser_hip"
+    t.decimal "trouser_knee"
+    t.decimal "trouser_thigh"
+    t.decimal "trouser_bottom"
+    t.decimal "trouser_f_low"
     t.integer "order_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
