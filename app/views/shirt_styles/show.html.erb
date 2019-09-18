@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Style for:</strong>
+  <%= @shirt_style.style_for %>
+</p>
+
+<p>
+  <strong>Style for fabric picture:</strong>
+  <%= @shirt_style.style_for_fabric_picture %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @shirt_style.style %>
+</p>
+
+<p>
+  <strong>Lapel:</strong>
+  <%= @shirt_style.lapel %>
+</p>
+
+<p>
+  <strong>Vent:</strong>
+  <%= @shirt_style.vent %>
+</p>
+
+<p>
+  <strong>Pocket:</strong>
+  <%= @shirt_style.pocket %>
+</p>
+
+<p>
+  <strong>Fit:</strong>
+  <%= @shirt_style.fit %>
+</p>
+
+<p>
+  <strong>Sleeve placket:</strong>
+  <%= @shirt_style.sleeve_placket %>
+</p>
+
+<p>
+  <strong>Front cut:</strong>
+  <%= @shirt_style.front_cut %>
+</p>
+
+<p>
+  <strong>Related pictures:</strong>
+  <%= @shirt_style.related_pictures %>
+</p>
+
+<p>
+  <strong>Master comment:</strong>
+  <%= @shirt_style.master_comment %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @shirt_style.order_id %>
+</p>
+
+<%= link_to 'Edit', edit_shirt_style_path(@shirt_style) %> |
+<%= link_to 'Back', shirt_styles_path %>

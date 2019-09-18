@@ -7,6 +7,7 @@ resources :stores do
 		
 		resources :orders do
 			resources :order_measurements
+			resources :shirt_styles
 		
 		end
 	

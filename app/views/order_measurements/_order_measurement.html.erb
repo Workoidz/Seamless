@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1> Body Posture & Measurements </h1>
+<h1> Body Posture & Measurements <%= link_to 'Click to Edit', edit_store_customer_order_order_measurement_path(@store,@customer,@order,order_measurement) %> </h1>
 
 <h2> Upper Body </h2>
 <p>
@@ -109,7 +109,7 @@
   <%= order_measurement.order_id %>
 </p>
 
-<%= link_to 'Edit', edit_store_customer_order_order_measurement_path(@store,@customer,@order,order_measurement) %> 
+
 
 
 
