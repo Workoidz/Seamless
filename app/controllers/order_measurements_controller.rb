@@ -92,10 +92,10 @@ class OrderMeasurementsController < ApplicationController
           @customer.customer_measurement.jacket_or_shirt_neck = @order.order_measurement.jacket_or_shirt_neck
           @customer.customer_measurement.jacket_or_shirt_hip = @order.order_measurement.jacket_or_shirt_hip
           @customer.customer_measurement.jacket_or_shirt_hale_back = @order.order_measurement.jacket_or_shirt_hale_back
-          @customer.customer_measurement.jacket_or_shirt_cross_back = @order.order_measurement.jacket_or_shirt_hale_back
-          @customer.customer_measurement.jacket_or_shirt_bicep = @order.order_measurement.jacket_or_shirt_cross_back
-          @customer.customer_measurement.jacket_or_shirt_cross_front = @order.order_measurement.jacket_or_shirt_bicep
-          @customer.customer_measurement.jacket_or_shirt_arm_hole_round = @order.order_measurement.jacket_or_shirt_cross_front
+          @customer.customer_measurement.jacket_or_shirt_cross_back = @order.order_measurement.jacket_or_shirt_cross_back
+          @customer.customer_measurement.jacket_or_shirt_bicep = @order.order_measurement.jacket_or_shirt_bicep
+          @customer.customer_measurement.jacket_or_shirt_cross_front = @order.order_measurement.jacket_or_shirt_cross_front
+          @customer.customer_measurement.jacket_or_shirt_arm_hole_round = @order.order_measurement.jacket_or_shirt_arm_hole_round
           @customer.customer_measurement.trouser_length = @order.order_measurement.trouser_length
           @customer.customer_measurement.trouser_crotch = @order.order_measurement.trouser_crotch
           @customer.customer_measurement.trouser_inseam = @order.order_measurement.trouser_inseam
