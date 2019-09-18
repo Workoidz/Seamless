@@ -1,0 +1,77 @@
+<%= form_with(model: [@store,@customer,@order,trouser_style], local: true) do |form| %>
+  <% if trouser_style.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trouser_style.errors.count, "error") %> prohibited this trouser_style from being saved:</h2>
+
+      <ul>
+        <% trouser_style.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :style_for %>
+    <%= form.text_field :style_for %>
+  </div>
+
+  <div class="field">
+    <%= form.label :style_for_fabric_picture %>
+    <%= form.text_field :style_for_fabric_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :belt %>
+    <%= form.text_field :belt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pleat %>
+    <%= form.text_field :pleat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pocket %>
+    <%= form.text_field :pocket %>
+  </div>
+
+  <div class="field">
+    <%= form.label :back_pocket %>
+    <%= form.text_field :back_pocket %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bottom %>
+    <%= form.text_field :bottom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loops %>
+    <%= form.text_field :loops %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fit %>
+    <%= form.text_field :fit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related_pictures %>
+    <%= form.text_field :related_pictures %>
+  </div>
+
+  <div class="field">
+    <%= form.label :master_comment %>
+    <%= form.text_field :master_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order_id %>
+    <%= form.text_field :order_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

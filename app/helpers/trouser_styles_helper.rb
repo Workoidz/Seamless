@@ -1,0 +1,2 @@
+module TrouserStylesHelper
+end

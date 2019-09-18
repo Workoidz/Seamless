@@ -84,6 +84,14 @@
 <h3><%= link_to 'click to add more shirt_style',new_store_customer_order_shirt_style_path(@store,@customer,@order) %></h3>
 <% end %>
 
+<h1> Here are the Trouser Styles :</h1>
+<% if @order.trouser_styles == nil %>
+<h3><%= link_to 'Add a shirt_style',new_store_customer_order_trouser_style_path(@store,@customer,@order) %></h3>
+<% else %>
 
+<%=render @order.trouser_styles %>
+<h3><%= link_to 'click to add more shirt_style',new_store_customer_order_trouser_style_path(@store,@customer,@order) %></h3>
+
+<% end %>
 
 
