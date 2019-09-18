@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee name:</strong>
+  <%= @employee.employee_name %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @employee.mobile %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @employee.password_digest %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @employee.role %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @employee.email %>
+</p>
+
+<p>
+  <strong>Aadhar card no:</strong>
+  <%= @employee.aadhar_card_no %>
+</p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @employee.store_id %>
+</p>
+
+<%= link_to 'Edit', edit_store_employee_path(@store,@employee) %> |
+<%= link_to 'Back', store_employees_path(@store) %>

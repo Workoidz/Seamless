@@ -13,6 +13,9 @@ resources :stores do
 		end
 	
 	end
+
+	resources :employees
+
 end
 
 end
