@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      <div style='float: right;'>Logged in as : <%= logged_in_employee.employee_name %> <%= link_to "logout",logout_path %></div>
+
+    <%end%>
+
     <%= yield %>
   </body>
 </html>
