@@ -1,4 +1,5 @@
 class StoresController < ApplicationController
+  skip_before_action :ensure_login, only: [:new, :create]
   before_action :set_store, only: [:show, :edit, :update, :destroy]
 
   # GET /stores
@@ -28,7 +29,22 @@ class StoresController < ApplicationController
 
     respond_to do |format|
       if @store.save
-        format.html { redirect_to @store, notice: 'Store was successfully created.' }
+
+        admin = @store.employees.new
+        admin.employee_name = "Admin"
+        admin.role = "admin"
+        admin.mobile = "admin@"+@store.contact_number
+        admin.password = @store.contact_number
+        admin.save
+
+        store_login = @store.employees.new
+        store_login.employee_name = "Store"
+        store_login.role = "store"
+        store_login.mobile = "store@"+@store.contact_number
+        store_login.password = @store.contact_number
+        store_login.save
+
+        format.html { redirect_to @store, notice: "Store was successfully created with Admin-login : #{admin.mobile} & password : #{@store.contact_number} AND Store-login : #{store_login.mobile} & password : #{store_login.mobile}" }
         format.json { render :show, status: :created, location: @store }
       else
         format.html { render :new }
