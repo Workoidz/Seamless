@@ -66,11 +66,12 @@ class CustomersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
-      @customer = Customer.find(params[:id])
+      @customer = logged_in_store.customers.find(params[:id])
     end
 
     def set_store
-      @store = Store.find(params[:store_id])
+       @store =  logged_in_store   #Store.find(params[:store_id])
+      #@store = Store.find(params[:store_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

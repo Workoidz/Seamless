@@ -5,7 +5,7 @@ class StoresController < ApplicationController
   # GET /stores
   # GET /stores.json
   def index
-    @stores = Store.all
+    #@stores = Store.all
   end
 
   # GET /stores/1
@@ -44,7 +44,7 @@ class StoresController < ApplicationController
         store_login.password = @store.contact_number
         store_login.save
 
-        format.html { redirect_to @store, notice: "Store was successfully created with Admin-login : #{admin.mobile} & password : #{@store.contact_number} AND Store-login : #{store_login.mobile} & password : #{store_login.mobile}" }
+        format.html { redirect_to @store, notice: "Store was successfully created with Admin-login : #{admin.mobile} & password : #{@store.contact_number} AND Store-login : #{store_login.mobile} & password : #{@store.contact_number}" }
         format.json { render :show, status: :created, location: @store }
       else
         format.html { render :new }
@@ -80,7 +80,8 @@ class StoresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_store
-      @store = Store.find(params[:id])
+       @store =  logged_in_store   #Store.find(params[:store_id])
+      # @store = Store.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

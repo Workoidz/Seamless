@@ -131,16 +131,16 @@ class OrderMeasurementsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
-      @customer = Customer.find(params[:customer_id])
+      @customer = logged_in_store.customers.find(params[:customer_id])
     end
     def set_store
-      @store = Store.find(params[:store_id])
+      @store = logged_in_store #Store.find(params[:store_id])
     end
     def set_order
-      @order = Order.find(params[:order_id])
+      @order = @customer.orders.find(params[:order_id])
     end
     def set_order_measurement
-      @order_measurement = OrderMeasurement.find(params[:id])
+      @order_measurement = @order.order_measurement
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

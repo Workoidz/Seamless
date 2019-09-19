@@ -24,6 +24,8 @@ end
 resources :sessions , only: [:new,:create,:destroy]
 
 get "/login" => "sessions#new", as: "login"
-get "/logout" => "sessions#destroy", as: "logout"	
+get "/logout" => "sessions#destroy", as: "logout"
+
+root to: 'sessions#new'
 
 end

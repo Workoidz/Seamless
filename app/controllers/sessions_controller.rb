@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   		store = Store.find_by(id: employee.store_id)
   		session[:employee_role] = employee.role
 
-  	redirect_to stores_path, notice: employee.employee_name + store.store_name + employee.role
+  	redirect_to store_customers_path(store), notice: employee.employee_name + store.store_name + employee.role
 
   	else
 
