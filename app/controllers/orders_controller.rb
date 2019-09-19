@@ -103,7 +103,7 @@ class OrdersController < ApplicationController
       @store = logged_in_store #Store.find(params[:store_id])
     end
     def set_order
-      @order = customer.orders.find(params[:id])
+      @order = @customer.orders.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
