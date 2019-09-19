@@ -19,12 +19,12 @@ Store.create!(
 
 Employee.create!(
 	[
-		{employee_name: "Vijay", mobile: "1234567890", password_digest: "vijay@123", role: "sales", email: "vijay@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Honore").id)},
-		{employee_name: "Ajay", mobile: "1234567890", password_digest: "ajay@123", role: "master", email: "vijay@gmail.com", aadhar_card_no: "xxx222xxx", store_id: (Store.find_by(store_name: "Honore").id)},
-		{employee_name: "Ravi", mobile: "1234567890", password_digest: "ravi@123", role: "account", email: "ravi@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Honore").id)},
-		{employee_name: "Amit", mobile: "1234567890", password_digest: "amit@123", role: "sales", email: "amit@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Diwan Sahib").id)},
-		{employee_name: "Rajesh", mobile: "1234567890", password_digest: "rajesh@123", role: "master", email: "rajesh@gmail.com", aadhar_card_no: "xxx222xxx", store_id: (Store.find_by(store_name: "Diwan Sahib").id)},
-		{employee_name: "Rohit", mobile: "1234567890", password_digest: "rohit@123", role: "account", email: "rohit@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Diwan Sahib").id)}
+		{employee_name: "Vijay", mobile: "1234567890", password: "vijay@123", role: "sales", email: "vijay@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Honore").id)},
+		{employee_name: "Ajay", mobile: "1234567890", password: "ajay@123", role: "master", email: "vijay@gmail.com", aadhar_card_no: "xxx222xxx", store_id: (Store.find_by(store_name: "Honore").id)},
+		{employee_name: "Ravi", mobile: "1234567890", password: "ravi@123", role: "account", email: "ravi@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Honore").id)},
+		{employee_name: "Amit", mobile: "1234567890", password: "amit@123", role: "sales", email: "amit@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Diwan Sahib").id)},
+		{employee_name: "Rajesh", mobile: "1234567890", password: "rajesh@123", role: "master", email: "rajesh@gmail.com", aadhar_card_no: "xxx222xxx", store_id: (Store.find_by(store_name: "Diwan Sahib").id)},
+		{employee_name: "Rohit", mobile: "1234567890", password: "rohit@123", role: "account", email: "rohit@gmail.com", aadhar_card_no: "xxx111xxx", store_id: (Store.find_by(store_name: "Diwan Sahib").id)}
 	]
 	)
 
