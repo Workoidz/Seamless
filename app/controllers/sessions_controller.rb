@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :ensure_login, only: [:new, :create]
 
   def new
+    reset_session
   end
 
   def create
@@ -18,7 +19,7 @@ class SessionsController < ApplicationController
   		store = Store.find_by(id: employee.store_id)
   		session[:employee_role] = employee.role
 
-      if ( employee.role == "admin")
+      if ( employee.role == "admin" || employee.role == "Admin" || employee.role == "ADMIN" )
         redirect_to store_employees_path(store)
       else
         redirect_to store_customers_path(store), notice: employee.employee_name + store.store_name + employee.role
