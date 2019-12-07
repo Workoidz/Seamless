@@ -2,6 +2,8 @@ class TrouserStylesController < ApplicationController
   before_action :set_store, :set_customer, :set_order
   before_action :set_trouser_style, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /trouser_styles
   # GET /trouser_styles.json
   def index
@@ -62,6 +64,12 @@ class TrouserStylesController < ApplicationController
     end
   end
 
+  # added for paper_trail logs, for whodunnit
+  def current_user
+    Employee.find(session[:employee_id])
+    
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
@@ -74,7 +82,7 @@ class TrouserStylesController < ApplicationController
       @order = @customer.orders.find(params[:order_id]) #Order.find(params[:order_id])
     end
     def set_trouser_style
-      @trouser_style = @order.shirt_styles.find(params[:id]) #TrouserStyle.find(params[:id])
+      @trouser_style = @order.trouser_styles.find(params[:id]) #TrouserStyle.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

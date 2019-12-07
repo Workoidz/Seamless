@@ -2,6 +2,8 @@ class ShirtStylesController < ApplicationController
   before_action :set_store, :set_customer, :set_order
   before_action :set_shirt_style, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /shirt_styles
   # GET /shirt_styles.json
   def index
@@ -61,6 +63,13 @@ class ShirtStylesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # added for paper_trail logs, for whodunnit
+  def current_user
+    Employee.find(session[:employee_id])
+    
+  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

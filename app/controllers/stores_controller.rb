@@ -44,7 +44,16 @@ class StoresController < ApplicationController
         store_login.password = @store.contact_number
         store_login.save
 
-        format.html { redirect_to @store, notice: "Store was successfully created with Admin-login : #{admin.mobile} & password : #{@store.contact_number} AND Store-login : #{store_login.mobile} & password : #{@store.contact_number}" }
+        # Getting the Admin Loggged after Creating the Account
+        employee = admin
+        session[:employee_id] = employee.id
+        session[:store_id]  = employee.store_id
+        store = Store.find_by(id: employee.store_id)
+        session[:employee_role] = employee.role
+
+
+
+        format.html { redirect_to store_employees_url(@store), notice: "Store was successfully created with Admin-login : #{admin.mobile} & password : #{@store.contact_number} AND Store-login : #{store_login.mobile} & password : #{@store.contact_number}" }
         format.json { render :show, status: :created, location: @store }
       else
         format.html { render :new }

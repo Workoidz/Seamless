@@ -2,7 +2,10 @@ class ApplicationController < ActionController::Base
 
 	before_action :ensure_login
 	helper_method :logged_in? , :logged_in_employee , :logged_in_store , :logged_in_employee_role
+	before_action :set_paper_trail_whodunnit
 
+	
+	
 
 	protected
 		def ensure_login

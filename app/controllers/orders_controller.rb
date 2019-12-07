@@ -2,6 +2,8 @@ class OrdersController < ApplicationController
   before_action :set_store,:set_customer
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+ 
+
   # GET /orders
   # GET /orders.json
   def index
@@ -92,6 +94,13 @@ class OrdersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # added for paper_trail logs, for whodunnit
+  def current_user
+    Employee.find(session[:employee_id])
+    
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -2,6 +2,8 @@ class OrderMeasurementsController < ApplicationController
   before_action :set_store, :set_customer, :set_order
   before_action :set_order_measurement, only: [:show, :edit, :update, :destroy]
 
+  
+
   # GET /order_measurements
   # GET /order_measurements.json
   def index
@@ -126,6 +128,12 @@ class OrderMeasurementsController < ApplicationController
       format.html { redirect_to order_measurements_url, notice: 'Order measurement was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  # added for paper_trail logs, for whodunnit
+  def current_user
+    Employee.find(session[:employee_id])
+    
   end
 
   private
