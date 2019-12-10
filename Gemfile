@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # for logs, changes done by which user
  gem 'paper_trail'
 
+ gem 'bootstrap', '~> 4.4.1'
+ gem 'jquery-rails'  
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
