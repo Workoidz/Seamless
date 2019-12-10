@@ -270,9 +270,11 @@ html, body {
                 
                 
             </div>
-            <div class="submit-btn">
-              <%= form.submit %>
+            <div>
+              <%= form.submit "Log In", class: "submit-btn"%>
             </div>
+
+            <div><a href="<%=new_store_path%>" style="text-decoration: none;"><button class="submit-btn">Create New Store..!</button></a></div>
          </div>
         <div class="login slide-up">
             <div class="center" style="text-align: center;">
@@ -280,7 +282,7 @@ html, body {
             </div>
         </div>
     </div>
-<h3><%= link_to 'For new Store, Kindly register here...!', new_store_path %></h3>
+<!--<h3><%= link_to 'For new Store, Kindly register here...!', new_store_path %></h3>-->
 <%end%>
 
 <footer></footer>
