@@ -1,6 +1,47 @@
+<style type="text/css">
+  form {
+    padding-bottom: 10px;
+  }
+  .customer-view{
+    border: 2px solid Black;
+    margin: 5px;
+  }
+</style>
+
+
 <p id="notice"><%= notice %></p>
 
-<h1>Customers</h1>
+<h1>Customers</h1><%= link_to 'New Customer', new_store_customer_path %>
+
+<div class="container">
+  <div class="row">
+    
+    <% @customers.each do |customer| %>
+
+      <div class=" customer-view col-12 col-sm-6 col-md-4 col-lg-3">
+        <%= link_to customer.customer_name, store_customer_orders_path(@store,customer) %>
+        <%= customer.contact_number %><br>
+        <%= link_to 'Show', store_customer_path(@store,customer) %>
+        <%= link_to 'Measurement', store_customer_customer_measurements_path(@store,customer) %>
+
+
+        
+      </div>
+
+      
+    <% end %>
+
+
+  </class>
+</class>
+
+
+
+
+<!--
+<p id="notice"><%= notice %></p>
+
+<h1>Customers</h1><%= link_to 'New Customer', new_store_customer_path %>
 
 <table>
   <thead>
@@ -41,4 +82,4 @@
 
 <br>
 
-<%= link_to 'New Customer', new_store_customer_path %>
+<%= link_to 'New Customer', new_store_customer_path %>-->

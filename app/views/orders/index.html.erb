@@ -1,3 +1,49 @@
+
+<style type="text/css">
+  form {
+    padding-bottom: 10px;
+  }
+  .order-view{
+    border: 2px solid Black;
+    margin: 5px;
+  }
+</style>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Orders ( <%= @customer.customer_name  %> )</h1>
+<%= link_to 'New Order', new_store_customer_order_path(@store,@customer) %>
+<%= link_to 'Back', store_customers_path(@store) %>
+
+<div class="container">
+  <div class="row">
+    
+    <% @orders.each do |order| %>
+
+      <div class=" order-view col-12 col-sm-6 col-md-4 col-lg-3">
+        
+        <a href="<%=store_customer_order_path(@store,@customer,order)%>">Order No : <%= order.id %></a><br>
+        <b>Trail Date :</b> <%= order.trail_date %> Status : <%= order.trail_status %> <br>
+        <b>Delivery Date :</b> <%= order.delivery_date %> Status: <%= order.delivery_status %>
+        
+
+
+        
+      </div>
+
+      
+    <% end %>
+
+
+  </class>
+</class>
+
+
+
+
+
+<!--
 <p id="notice"><%= notice %></p>
 
 <h1>Orders</h1>
@@ -53,4 +99,4 @@
 <br>
 
 <%= link_to 'New Order', new_store_customer_order_path(@store,@customer) %>
-<%= link_to 'Back', store_customers_path(@store) %>
+<%= link_to 'Back', store_customers_path(@store) %> -->
