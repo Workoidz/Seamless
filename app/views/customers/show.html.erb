@@ -1,3 +1,66 @@
+<style type="text/css">
+  
+</style>
+
+
+<div class="container">
+
+    <div class="row">
+      <h1><%=@customer.customer_name %> - Details</h1>
+     </div>
+     <div class="row"> 
+      <p>
+      <%= link_to 'Edit', edit_store_customer_path(@store,@customer) %> |
+      <%= link_to 'Back', store_customers_path(@store) %>
+      </p>
+    </div>
+  
+    <div class="row">
+    <div class="col-12">
+      <strong>Customer name:</strong>
+      <%= @customer.customer_name %>
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <strong>Contact number:</strong>
+        <%= @customer.contact_number %>
+        <strong>Email:</strong>
+        <%= @customer.email %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <strong>Address:</strong>
+        <%= @customer.address %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <strong>Date of birth:</strong>
+        <%= @customer.date_of_birth %>
+        <strong>Date of anniversary:</strong>
+        <%= @customer.date_of_anniversary %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <strong>Contact Profile:</strong>
+        <%= @customer.profile %>
+      </div>
+    </div>
+ 
+
+</div>
+
+
+
+<!--
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -46,4 +109,4 @@
 </p>
 
 <%= link_to 'Edit', edit_store_customer_path(@store,@customer) %> |
-<%= link_to 'Back', store_customers_path(@store) %>
+<%= link_to 'Back', store_customers_path(@store) %> -->

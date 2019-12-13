@@ -11,7 +11,52 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-2"><%= form.label :customer_name %> </div>
+    <div class="col-2"><%= form.text_field :customer_name %> </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2"><%= form.label :contact_number %></div>
+    <div class="col-2"><%= form.text_field :contact_number %></div>
+  </div>
+
+  <div class="row">
+    <div class="col-2"><%= form.label :email %> </div>
+    <div class="col-2"><%= form.text_field :email %> </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2"><%= form.label :address %> </div>
+    <div class="col-2"><%= form.text_area :address %> </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2"><%= form.label :date_of_birth %> </div>
+    <div class="col-2"><%= form.date_select :date_of_birth %> </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2"><%= form.label :date_of_anniversary %></div>
+    <div class="col-2"><%= form.date_select :date_of_anniversary %> </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2"><%= form.label :profile %> </div>
+    <div class="col-2"><%= form.text_field :profile %> </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2"> </div>
+    <div class="col-2"><%= form.submit %> </div>
+  </div>
+
+</div>
+
+ <!-- <div class="field">
     <%= form.label :customer_name %>
     <%= form.text_field :customer_name %>
   </div>
@@ -58,5 +103,5 @@
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+  </div> -->
 <% end %>

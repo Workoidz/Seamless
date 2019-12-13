@@ -1,3 +1,147 @@
+
+<style type="text/css">
+td{
+    border: 2px Black solid;
+    width: 100px;
+    padding-left: 20px;
+  }
+
+  
+</style>
+
+<% customer_measurement = @customer_measurements %>
+    <% if customer_measurement != nil then %>
+
+<div class="container">
+  
+  <div class="row"><h1>Body Posture & Measurements</h1></div>
+  <div class="row"><h6>For <%=@customer.customer_name%></h6></div>
+
+  <div class="container">
+  
+  <div class="row"><h3>Upper Body Posture</h3></div>
+
+  <div class="row">
+    <div class="col-12 col-sm-4">
+      <h6>Body Shape</h6> <br>
+      <img height="200px" width="300" src="<%=asset_url("back-shape.jpg")%>"><br>
+      <table>
+        <tr><% if customer_measurement.upper_body_back_shape == "Normal" then %><td bgcolor="#00f"><%else%><td><%end%>Normal</td><% if customer_measurement.upper_body_back_shape == "Stooped" then %><td bgcolor="#00f"><%else%><td><%end%>Stooped</td><% if customer_measurement.upper_body_back_shape == "Erect" then %><td bgcolor="#00f"><%else%><td><%end%>Erect</td></tr>
+      </table>
+                                     
+    </div>
+
+    <div class="col-12 col-sm-4">
+      <h6>Stomach</h6> <br>
+      <img height="200px" width="300" src="<%=asset_url("stomach.jpg")%>"><br>
+      <table>
+        <tr><% if customer_measurement.upper_body_stomach == "Forward Stomach" then %><td bgcolor="#00f"><%else%><td><%end%>Forward Stomach</td><% if customer_measurement.upper_body_stomach == "Stout" then %><td bgcolor="#00f"><%else%><td><%end%>Stout</td><% if customer_measurement.upper_body_stomach == "Large" then %><td bgcolor="#00f"><%else%><td><%end%>Large</td></tr>
+      </table>
+    </div>
+
+    <div class="col-12 col-sm-4">
+      <h6>Shoulder Type</h6> <br>
+      <img height="200px" width="300" src="<%=asset_url("shoulder.jpg")%>"><br>
+      <table>
+        <tr><% if customer_measurement.upper_body_shoulder == "Sloping" then %><td bgcolor="#00f"><%else%><td><%end%>Sloping</td><% if customer_measurement.upper_body_shoulder == "Regular" then %><td bgcolor="#00f"><%else%><td><%end%>Regular</td><% if customer_measurement.upper_body_shoulder == "Square" then %><td bgcolor="#00f"><%else%><td><%end%>Square</td></tr>
+      </table>
+    </div>
+  </div>
+  
+
+  </div>
+
+  <div class="container">
+  
+  <div class="row"><h3>Lower Body Posture</h3></div>
+
+  <div class="row">
+    <div class="col-12 col-sm-5">
+      
+      <img height="200px" width="400" src="<%=asset_url("lower-body-posture.jpg")%>"><br>
+      <table>
+        <tr><% if customer_measurement.lower_body_posture == "Knock Knee" then %><td bgcolor="#00f"><%else%><td><%end%>Knock Knee</td><% if customer_measurement.lower_body_posture == "Joint Thigh" then %><td bgcolor="#00f"><%else%><td><%end%>Joint Thigh</td><% if customer_measurement.lower_body_posture == "Bow Leg" then %><td bgcolor="#00f"><%else%><td><%end%>Bow Leg</td><% if customer_measurement.lower_body_posture == "Prominent Thigh" then %><td bgcolor="#00f"><%else%><td><%end%>Prominent Thigh</td></tr>
+      </table>
+      
+    </div>
+
+  </div>
+  
+  </div>
+
+
+  <div class="container">
+  
+  <div class="row"><h3>Upper Body Measurements</h3></div>
+
+  <div class="row">
+    <div class="col-4 col-sm-4">
+      Length : <%= customer_measurement.jacket_or_shirt_length %> <br>
+      Shoulder : <%= customer_measurement.jacket_or_shirt_shoulder %><br>
+      Sleeve Length : <%= customer_measurement.jacket_or_shirt_sleeve_length %><br>
+      Chest : <%= customer_measurement.jacket_or_shirt_chest %><br>
+    </div>
+
+    <div class="col-4 col-sm-4">
+        Waist : <%= customer_measurement.jacket_or_shirt_waist %><br>
+        Neck : <%= customer_measurement.jacket_or_shirt_neck %><br>
+        Hip: <%= customer_measurement.jacket_or_shirt_hip %><br>
+        Hale Back :<%= customer_measurement.jacket_or_shirt_hale_back %><br>
+    </div>
+
+    <div class="col-4 col-sm-4">
+        Cross Back : <%= customer_measurement.jacket_or_shirt_cross_back %><br>
+        Bicep : <%= customer_measurement.jacket_or_shirt_bicep %><br>
+        Cross Front : <%= customer_measurement.jacket_or_shirt_cross_front %><br>
+        Arm Hole Round :<%= customer_measurement.jacket_or_shirt_arm_hole_round %><br>
+    </div>
+  </div>
+  
+
+  </div>
+
+  <div class="container">
+  
+  <div class="row"><h3>Lower Body Measurements</h3></div>
+
+  <div class="row">
+    <div class="col-4 col-sm-4">
+        Length : <%= customer_measurement.trouser_length %><br>
+        Crotch : <%= customer_measurement.trouser_crotch %><br>
+        Inseam : <%= customer_measurement.trouser_inseam %><br>
+        
+    </div>
+
+    <div class="col-4 col-sm-4">
+        Waist : <%= customer_measurement.trouser_waist %><br>
+        Hip : <%= customer_measurement.trouser_hip %><br>
+        Knee : <%= customer_measurement.trouser_knee %><br>
+        
+    </div>
+
+    <div class="col-4 col-sm-4">
+         Thigh : <%= customer_measurement.trouser_thigh %><br>
+         Bottom : <%= customer_measurement.trouser_bottom %><br>
+         F - Low : <%= customer_measurement.trouser_f_low %><br>
+      
+    </div>
+  </div>
+  
+
+  </div>
+
+
+
+</div>
+<% else %>
+        <%= link_to 'Kindly add the measurements..!', new_store_customer_customer_measurement_path(@store,@customer) %>
+<% end %>
+
+<%= link_to 'Back', store_customers_path(@store) %> 
+
+<!--
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Customer Measurements</h1>
@@ -79,5 +223,5 @@
 
 <br>
 
-<%= link_to 'Back', store_customers_path(@store) %>
+<%= link_to 'Back', store_customers_path(@store) %> -->
 
