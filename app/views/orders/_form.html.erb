@@ -26,7 +26,11 @@
         <%= form.label :stitching_advance %> : <%= form.number_field :stitching_advance %>
       </div>
     </div>
-    <div class="row"><strong><%= form.label :balance_clear_status %></strong> : <%= radio_button "order","balance_clear_status","Not Clear" %> Not Clear <%= radio_button "order","balance_clear_status","Clear" %> Clear 
+    <div class="row">
+      <div class="col-3">
+      <strong><%= form.label :balance_clear_status %></strong> : </div>
+      <div class="col-3">
+      <%= radio_button "order","balance_clear_status","Not Clear" %> Not Clear <%= radio_button "order","balance_clear_status","Clear" %> Clear</div> 
     </div>
     <div class="row"><p><br><%= form.label :remark %> : <%= form.text_area :remark %></p></div>
     

@@ -1,3 +1,41 @@
+
+<%= form_with(model: [@store,@customer,@order,shirt_style], local: true) do |form| %>
+
+    <div class="container">
+      
+      <div class="row"><h5><strong>Style for : </strong><%= form.text_field :style_for %></h5></div>
+
+      <div class="row">
+        <div class="col-4">
+          <strong>Style : </strong><%= form.text_field :style %><br>
+          <strong>Lapel : </strong><%= form.text_field :lapel %><br>
+          <strong>Vent : </strong><%= form.text_field :vent %><br>
+          <strong>Pocket : </strong><%= form.text_field :pocket %>
+        </div>
+        <div class="col-4">
+          <strong>Fit : </strong><%= form.text_field :fit %><br>
+          <strong>Sleeve placket : </strong><%= form.text_field :sleeve_placket %><br>
+          <strong>Front cut : </strong><%= form.text_field :front_cut %>
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-10">
+        <p>
+          <strong>Master comment : </strong>
+          <i><%= form.text_area :master_comment %></i>
+        </p>
+        </div>
+      </div>  
+
+      <div class="row"><%= form.submit %></div>
+
+    </div>
+
+<% end %>
+
+<!--
 <%= form_with(model: [@store,@customer,@order,shirt_style], local: true) do |form| %>
   <% if shirt_style.errors.any? %>
     <div id="error_explanation">
@@ -75,3 +113,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+-->

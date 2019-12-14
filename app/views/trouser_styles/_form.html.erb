@@ -1,4 +1,42 @@
 <%= form_with(model: [@store,@customer,@order,trouser_style], local: true) do |form| %>
+
+      <div class="container">
+        
+        <div class="row"><h5><strong>Style for : </strong><%= form.text_field :style_for %></h5></div>
+
+        <div class="row">
+          <div class="col-4">
+            <strong>Belt : </strong><%= form.text_field :belt %><br>
+            <strong>Pleat : </strong><%= form.text_field :pleat %><br>
+            <strong>Pocket : </strong><%= form.text_field :pocket %><br>
+            <strong>Back Pocket:</strong><%= form.text_field :back_pocket %>
+          </div>
+          <div class="col-4">
+            <strong>Bottom : </strong><%= form.text_field :bottom %><br>
+            <strong>Loops : </strong><%= form.text_field :loops %><br>
+            <strong>Fit : </strong><%= form.text_field :fit %>
+            
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-10">
+          <p>
+            <strong>Master comment:</strong>
+            <i><%= form.text_area :master_comment %></i>
+          </p>
+          </div>
+        </div>  
+
+        <div class="row"><%= form.submit %></div>
+
+      </div>
+
+
+<%end%>
+
+
+<!--<%= form_with(model: [@store,@customer,@order,trouser_style], local: true) do |form| %>
   <% if trouser_style.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(trouser_style.errors.count, "error") %> prohibited this trouser_style from being saved:</h2>
@@ -75,3 +113,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+-->

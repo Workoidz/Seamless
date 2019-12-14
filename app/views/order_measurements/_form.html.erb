@@ -1,3 +1,137 @@
+<style type="text/css">
+td{
+    border: 2px Black solid;
+    width: 100px;
+    padding-left: 20px;
+  }
+
+  
+</style>
+
+
+<%= form_with(model: [@store,@customer,@order,order_measurement], local: true) do |form| %>
+
+  <div class="container">
+    
+    <div class="container">
+  
+        <div class="row"><h3>Upper Body Posture</h3></div>
+
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <h6>Body Shape</h6> <br>
+            <img height="200px" width="300" src="<%=asset_url("back-shape.jpg")%>"><br>
+            <table>
+              <tr><% if order_measurement.upper_body_back_shape == "Normal" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_back_shape","Normal" %>Normal</td><% if order_measurement.upper_body_back_shape == "Stooped" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_back_shape","Stooped" %>Stooped</td><% if order_measurement.upper_body_back_shape == "Erect" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_back_shape","Erect" %>Erect</td></tr>
+            </table>
+                                           
+          </div>
+
+          <div class="col-12 col-sm-4">
+            <h6>Stomach</h6> <br>
+            <img height="200px" width="300" src="<%=asset_url("stomach.jpg")%>"><br>
+            <table>
+              <tr><% if order_measurement.upper_body_stomach == "Forward Stomach" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_stomach","Forward Stomach" %>Forward Stomach</td><% if order_measurement.upper_body_stomach == "Stout" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_stomach","Stout" %>Stout</td><% if order_measurement.upper_body_stomach == "Large" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_stomach","Large" %>Large</td></tr>
+            </table>
+          </div>
+
+          <div class="col-12 col-sm-4">
+            <h6>Shoulder Type</h6> <br>
+            <img height="200px" width="300" src="<%=asset_url("shoulder.jpg")%>"><br>
+            <table>
+              <tr><% if order_measurement.upper_body_shoulder == "Sloping" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_shoulder","Sloping" %>Sloping</td><% if order_measurement.upper_body_shoulder == "Regular" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_shoulder","Regular" %>Regular</td><% if order_measurement.upper_body_shoulder == "Square" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","upper_body_shoulder","Square" %>Square</td></tr>
+            </table>
+          </div>
+        </div>
+  
+    </div>
+
+    <div class="container">
+      <div class="row"><h3>Lower Body Posture</h3></div>
+
+      <div class="row">
+        <div class="col-12 col-sm-5">
+          
+          <img height="200px" width="400" src="<%=asset_url("lower-body-posture.jpg")%>"><br>
+          <table>
+            <tr><% if order_measurement.lower_body_posture == "Knock Knee" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","lower_body_posture","Knock Knee" %>Knock Knee</td><% if order_measurement.lower_body_posture == "Joint Thigh" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","lower_body_posture","Joint Thigh" %>Joint Thigh</td><% if order_measurement.lower_body_posture == "Bow Leg" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","lower_body_posture","Bow Leg" %>Bow Leg</td><% if order_measurement.lower_body_posture == "Prominent Thigh" then %><td bgcolor="#00f"><%else%><td><%end%><%= radio_button "order_measurement","lower_body_posture","Prominent Thigh" %>Prominent Thigh</td></tr>
+          </table>
+          
+        </div>
+
+        </div>
+      </div>
+
+
+      
+      <div class="container">
+  
+      <div class="row"><h3>Upper Body Measurements</h3></div>
+        <div class="row">
+          <div class="col-4 col-sm-4">
+            Length : <%= form.text_field :jacket_or_shirt_length %> <br>
+            Shoulder : <%= form.text_field :jacket_or_shirt_shoulder %><br>
+            Sleeve Length : <%= form.text_field :jacket_or_shirt_sleeve_length %><br>
+            Chest : <%= form.text_field :jacket_or_shirt_chest %><br>
+          </div>
+
+          <div class="col-4 col-sm-4">
+              Waist : <%= form.text_field :jacket_or_shirt_waist %><br>
+              Neck : <%= form.text_field :jacket_or_shirt_neck %><br>
+              Hip: <%= form.text_field :jacket_or_shirt_hip %><br>
+              Hale Back :<%= form.text_field :jacket_or_shirt_hale_back %><br>
+          </div>
+
+          <div class="col-4 col-sm-4">
+              Cross Back : <%= form.text_field :jacket_or_shirt_cross_back %><br>
+              Bicep : <%= form.text_field :jacket_or_shirt_bicep %><br>
+              Cross Front : <%= form.text_field :jacket_or_shirt_cross_front %><br>
+              Arm Hole Round :<%= form.text_field :jacket_or_shirt_arm_hole_round %><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+  
+      <div class="row"><h3>Lower Body Measurements</h3></div>
+
+      <div class="row">
+        
+        <div class="col-4 col-sm-4">
+            Length : <%= form.text_field :trouser_length %><br>
+            Crotch : <%= form.text_field :trouser_crotch %><br>
+            Inseam : <%= form.text_field :trouser_inseam %><br>
+            
+        </div>
+
+        <div class="col-4 col-sm-4">
+            Waist : <%= form.text_field :trouser_waist %><br>
+            Hip : <%= form.text_field :trouser_hip %><br>
+            Knee : <%= form.text_field :trouser_knee %><br>
+            
+        </div>
+
+        <div class="col-4 col-sm-4">
+             Thigh : <%= form.text_field :trouser_thigh %><br>
+             Bottom : <%= form.text_field :trouser_bottom %><br>
+             F - Low : <%= form.text_field :trouser_f_low %><br>
+          
+        </div>
+      </div>
+  
+
+
+    <div class="row"><%= form.submit %></div>
+
+  </div>
+
+
+<% end %>
+
+
+
+
+<!--
 <%= form_with(model: [@store,@customer,@order,order_measurement], local: true) do |form| %>
   <% if order_measurement.errors.any? %>
     <div id="error_explanation">
@@ -145,3 +279,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+-->
