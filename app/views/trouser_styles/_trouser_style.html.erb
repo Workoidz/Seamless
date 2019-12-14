@@ -1,52 +1,32 @@
-<p id="notice"><%= notice %></p>
 
-<h2>Trouser style for :   <%= trouser_style.style_for %> <%= link_to 'Click to Edit', edit_store_customer_order_trouser_style_path(@store,@customer,@order,trouser_style) %></h2>
+<div class="container">
+  
+  <div class="row"><h5><strong>Style for:</strong><%= trouser_style.style_for %><%= link_to ' Click to Edit', edit_store_customer_order_trouser_style_path(@store,@customer,@order,trouser_style) %></h5></div>
 
+  <div class="row">
+    <div class="col-4">
+      <strong>Belt : </strong><%= trouser_style.belt %><br>
+      <strong>Pleat : </strong><%= trouser_style.pleat %><br>
+      <strong>Pocket : </strong><%= trouser_style.pocket %><br>
+      <strong>Back Pocket:</strong><%= trouser_style.back_pocket %>
+    </div>
+    <div class="col-4">
+      <strong>Bottom : </strong><%= trouser_style.bottom %><br>
+      <strong>Loops : </strong><%= trouser_style.loops %><br>
+      <strong>Fit : </strong><%= trouser_style.fit %>
+      
+    </div>
+  </div>
 
-<p>
-  <strong>Style for fabric picture:</strong>
-  <%= trouser_style.style_for_fabric_picture %>
+  <div class="row">
+    <div class="col-10">
+    <p>
+      <strong>Master comment:</strong>
+      <i><%= trouser_style.master_comment %></i>
+    </p>
+    </div>
+  </div>  
 
+</div>
 
-  <strong>Belt:</strong>
-  <%= trouser_style.belt %>
-
-
-  <strong>Pleat:</strong>
-  <%= trouser_style.pleat %>
-
-
-  <strong>Pocket:</strong>
-  <%= trouser_style.pocket %>
-
-
-  <strong>Back pocket:</strong>
-  <%= trouser_style.back_pocket %>
-
-
-  <strong>Bottom:</strong>
-  <%= trouser_style.bottom %>
-
-
-  <strong>Loops:</strong>
-  <%= trouser_style.loops %>
-
-
-  <strong>Fit:</strong>
-  <%= trouser_style.fit %>
-
-
-  <strong>Related pictures:</strong>
-  <%= trouser_style.related_pictures %>
-
-
-<p>
-  <strong>Master comment:</strong>
-  <%= trouser_style.master_comment %>
-</p>
-
-<p>
-  <strong>Order:</strong>
-  <%= trouser_style.order_id %>
-</p>
 
