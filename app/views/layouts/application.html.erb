@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <a href="<%= dashboard_today_trails_path %>"><button class="btn btn-xs btn-primary has-icon">DashBoard</button></a>
+   
     <% if logged_in? %>
       <div style='float: right;'>Logged in as : <b><%= logged_in_employee.employee_name %></b> in Store <b><%=logged_in_store.store_name%> <%= link_to "logout",logout_path %></b></div>
 
