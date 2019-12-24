@@ -22,7 +22,8 @@ class SessionsController < ApplicationController
       if ( employee.role == "admin" || employee.role == "Admin" || employee.role == "ADMIN" )
         redirect_to store_employees_path(store)
       else
-        redirect_to store_customers_path(store), notice: employee.employee_name + store.store_name + employee.role
+         redirect_to dashboard_today_trails_path
+        # redirect_to store_customers_path(store), notice: employee.employee_name + store.store_name + employee.role
       end
   	else
 

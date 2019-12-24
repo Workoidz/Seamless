@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  get 'dashboard/today_trails', to: 'dashboard#today_trails'
+  get 'dashboard/today_deliveries', to: 'dashboard#today_deliveries'
+
 resources :stores do
 	resources :customers do
 		resources :customer_measurements
