@@ -1,0 +1,79 @@
+<style type="text/css">
+  .row{
+    padding-left:  5px;
+  }
+</style>
+
+
+<div class="container shadow">
+  
+  <div class="container">
+    <div class="row"><h1>Order No. : <%= @order.id %> <a href="<%= edit_store_customer_order_path(@store,@customer,@order) %>"><button class="btn btn-xs btn-primary has-icon">Edit</button></a> | | <a href="<%=store_customer_orders_path(@store,@customer) %>"><button class="btn btn-xs btn-primary has-icon">Back</button></a> 
+      <!--<%= link_to 'Edit', edit_store_customer_order_path(@store,@customer,@order) %> |<%= link_to 'Back', store_customer_orders_path(@store,@customer) %>--></h1></div>
+
+    </div>
+    <div class="row"><h5>For <%=@customer.customer_name%> ( <%=@customer.contact_number%> ) <i>Dated : <%= @order.order_date %></i></h5>
+    </div>
+
+    <div class="row">
+      <p>
+      <strong>Trail date:</strong><%= @order.trail_date %>
+      <strong>Trail status:</strong><%= @order.trail_status %> <br>
+      <strong>Delivery date:</strong><%= @order.delivery_date %>
+      <strong>Delivery status:</strong><%= @order.delivery_status %>
+      </p>
+    </div>
+    <div class="row">
+      <p>
+       <strong>Remark:</strong><%= @order.remark %>
+      </p>
+    </div>
+    <div class="row">
+      <p>
+        <strong>Stitching cost:</strong><%= @order.stitching_cost %>
+        <strong>Fabric cost:</strong><%= @order.fabric_cost %><br>
+        <strong>Stitching advance:</strong><%= @order.stitching_advance %>
+        <strong>Fabric advance:</strong><%= @order.fabric_advance %>
+      
+        <br><strong>Balance clear status:</strong><%= @order.balance_clear_status %>
+      </p>
+      
+    </div>
+
+    <div class="container">
+      <% if @order.order_measurement == nil %>
+          <h1> <%= link_to 'Kindly add Body Posture & Measurements..!',new_store_customer_order_order_measurement_path(@store,@customer,@order) %> </h1>
+      <% else %>
+          <%= render @order.order_measurement %>
+      <% end %>
+    </div>   
+    <br>
+
+    <div class="container">
+      <div class="row"><h1>Shirt Styles :</h1></div>
+
+          <% if @order.shirt_styles == nil %>
+            <h3><%= link_to 'Add a shirt_style',new_store_customer_order_shirt_style_path(@store,@customer,@order) %></h3>
+          <% else %>
+              <%=render @order.shirt_styles %>
+              <h3><a href="<%= new_store_customer_order_shirt_style_path(@store,@customer,@order) %>"><button class="btn btn-xs btn-primary has-icon">click to add more Shirt Style</button></a> <!--<%= link_to 'click to add more Shirt Style',new_store_customer_order_shirt_style_path(@store,@customer,@order) %>--></h3>
+          <% end %>
+    </div>  
+
+    <br>
+    <div class="container">
+      <div class="row"><h1>Trouser Styles :</h1></div>
+
+        <% if @order.trouser_styles == nil %>
+            <h3><%= link_to 'Add a Trouser_style',new_store_customer_order_trouser_style_path(@store,@customer,@order) %></h3>
+        <% else %>
+            <%=render @order.trouser_styles %>
+            <h3><a href="<%= new_store_customer_order_trouser_style_path(@store,@customer,@order) %>"><button class="btn btn-xs btn-primary has-icon">click to add more Trouser Style</button></a> <!--<%= link_to 'click to add more Trouser Style',new_store_customer_order_trouser_style_path(@store,@customer,@order) %>--></h3>
+        <% end %>
+
+    </div>       
+
+
+</div>
+
+

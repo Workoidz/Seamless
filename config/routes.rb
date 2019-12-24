@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'dashboard/today_trails', to: 'dashboard#today_trails'
   get 'dashboard/today_deliveries', to: 'dashboard#today_deliveries'
+  get 'dashboard/search_customer', to: 'dashboard#search_customer'
+  get 'dashboard/search_order', to: 'dashboard#search_order'
 
 resources :stores do
 	resources :customers do
