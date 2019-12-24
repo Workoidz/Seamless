@@ -16,7 +16,12 @@ before_action :set_store
 	def search_customer
 
 		@customer = @searched_customer = @store.customers.where("contact_number = '#{params['search_customer']}'").first
-		@orders = @customer.orders
+		
+		if @searched_customer == nil then
+			redirect_to dashboard_today_trails_path, notice: "No Customer Found"
+		else
+			@orders = @customer.orders
+		end
 		
 	end
 
