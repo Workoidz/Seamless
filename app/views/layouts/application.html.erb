@@ -16,7 +16,10 @@
       <div style='float: right;'>Logged in as : <b><%= logged_in_employee.employee_name %></b> in Store <b><%=logged_in_store.store_name%> <%= link_to "logout",logout_path %></b></div>
 
     <%end%>
+    <br>
 
     <%= yield %>
+
+    <br>
   </body>
 </html>

@@ -1,10 +1,6 @@
-<style type="text/css">
-  .row{
-    padding-left:  5px;
-  }
-</style>
 
-<div class="container shadow">
+
+<div class="container">
   
   <div class="container">
     <div class="row"><h1>Order No. : <%= @order.id %> <a href="<%= edit_store_customer_order_path(@store,@customer,@order) %>"><button class="btn btn-xs btn-primary has-icon">Edit</button></a> | | <a href="<%=store_customer_orders_path(@store,@customer) %>"><button class="btn btn-xs btn-primary has-icon">Back</button></a> 
@@ -74,3 +70,103 @@
 
 
 </div>
+
+
+
+<!--
+<p id="notice"><%= notice %></p>
+<h1>Order No. : <%= @order.id %> <%= link_to 'Edit', edit_store_customer_order_path(@store,@customer,@order) %> |
+<%= link_to 'Back', store_customer_orders_path(@store,@customer) %></h1>
+<p>
+  <strong>Order date:</strong>
+  <%= @order.order_date %>
+</p>
+
+<p>
+  <strong>Trail date:</strong>
+  <%= @order.trail_date %>
+
+  <strong>Trail status:</strong>
+  <%= @order.trail_status %>
+</p>
+
+<p>
+  <strong>Delivery date:</strong>
+  <%= @order.delivery_date %>
+
+  <strong>Delivery status:</strong>
+  <%= @order.delivery_status %>
+</p>
+
+<p>
+  <strong>Order pictures:</strong>
+  <%= @order.order_pictures %>
+</p>
+
+<p>
+  <strong>Trail pictures:</strong>
+  <%= @order.trail_pictures %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @order.remark %>
+</p>
+
+<p>
+  <strong>Stitching cost:</strong>
+  <%= @order.stitching_cost %>
+
+  <strong>Fabric cost:</strong>
+  <%= @order.fabric_cost %>
+</p>
+
+<p>
+  <strong>Stitching advance:</strong>
+  <%= @order.stitching_advance %>
+
+  <strong>Fabric advance:</strong>
+  <%= @order.fabric_advance %>
+</p>
+
+<p>
+  <strong>Balance clear status:</strong>
+  <%= @order.balance_clear_status %>
+</p>
+
+<p>
+  <strong>Master allocated:</strong>
+  <%= @order.master_allocated %>
+
+  <strong>Customer:</strong>
+  <%= @order.customer_id %>
+</p>
+
+
+
+<% if @order.order_measurement == nil %>
+  <h1> <%= link_to 'Kindly add Body Posture & Measurements..!', new_store_customer_order_order_measurement_path(@store,@customer,@order) %> </h1>
+<% else %>
+   <%= render @order.order_measurement %>
+<% end %>
+
+<h1> Here are the Shirt Styles :</h1>
+<% if @order.shirt_styles == nil %>
+<h3><%= link_to 'Add a shirt_style',new_store_customer_order_shirt_style_path(@store,@customer,@order) %></h3>
+<% else %>
+
+<%=render @order.shirt_styles %>
+<h3><%= link_to 'click to add more shirt_style',new_store_customer_order_shirt_style_path(@store,@customer,@order) %></h3>
+<% end %>
+
+<h1> Here are the Trouser Styles :</h1>
+<% if @order.trouser_styles == nil %>
+<h3><%= link_to 'Add a Trouser_style',new_store_customer_order_trouser_style_path(@store,@customer,@order) %></h3>
+<% else %>
+
+<%=render @order.trouser_styles %>
+<h3><%= link_to 'click to sdsdsadd more Trouser_style',new_store_customer_order_trouser_style_path(@store,@customer,@order) %></h3>
+
+<% end %>
+
+-->

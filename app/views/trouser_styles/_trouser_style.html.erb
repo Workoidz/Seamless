@@ -1,7 +1,7 @@
 
 <div class="container">
   
-  <div class="row"><h5><strong>Style for:</strong><%= trouser_style.style_for %><%= link_to ' Click to Edit', edit_store_customer_order_trouser_style_path(@store,@customer,@order,trouser_style) %></h5></div>
+  <div class="row"><h5><strong>Style for:</strong><%= trouser_style.style_for %> <a href="<%= edit_store_customer_order_trouser_style_path(@store,@customer,@order,trouser_style) %>"><button class="btn btn-xs btn-primary has-icon">Edit..!</button></a><!--<%= link_to ' Click to Edit', edit_store_customer_order_trouser_style_path(@store,@customer,@order,trouser_style) %>--></h5></div>
 
   <div class="row">
     <div class="col-4">

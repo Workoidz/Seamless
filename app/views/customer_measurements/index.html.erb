@@ -131,13 +131,17 @@ td{
   </div>
 
 
-
 </div>
 <% else %>
-        <%= link_to 'Kindly add the measurements..!', new_store_customer_customer_measurement_path(@store,@customer) %>
+
+        <br>||<a href="<%= new_store_customer_customer_measurement_path(@store,@customer) %>"><button class="btn btn-xs btn-primary has-icon">Kindly add the measurements..!</button></a> | | 
+
+        <!--<%= link_to 'Kindly add the measurements..!', new_store_customer_customer_measurement_path(@store,@customer) %>-->
 <% end %>
 
-<%= link_to 'Back', store_customers_path(@store) %> 
+<a href="<%= store_customers_path(@store) %>"><button class="btn btn-xs btn-primary has-icon">Back</button></a>
+
+<!-- <%= link_to 'Back', store_customers_path(@store) %> -->
 
 <!--
 

@@ -44,6 +44,7 @@ class CustomerMeasurementsController < ApplicationController
   def update
     respond_to do |format|
       if @customer_measurement.update(customer_measurement_params)
+        p " in the UP"
         format.html { redirect_to [@store,@customer,@customer_measurement], notice: 'Customer measurement was successfully updated.' }
         format.json { render :show, status: :ok, location: @customer_measurement }
       else

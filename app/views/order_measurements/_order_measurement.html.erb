@@ -15,7 +15,7 @@ td{
 
 <div class="container">
   
-  <div class="row"><h1>Body Posture & Measurements <%= link_to 'Click to Edit', edit_store_customer_order_order_measurement_path(@store,@customer,@order,order_measurement) %></h1></div>
+  <div class="row"><h1>Body Posture & Measurements <a href="<%= edit_store_customer_order_order_measurement_path(@store,@customer,@order,order_measurement) %>"><button class="btn btn-xs btn-primary has-icon">click to Edit.!</button></a> <!--<%= link_to 'Click to Edit', edit_store_customer_order_order_measurement_path(@store,@customer,@order,order_measurement) %>--></h1></div>
   <div class="row"><h6>For <%=@customer.customer_name%></h6></div>
 
   <div class="container">
