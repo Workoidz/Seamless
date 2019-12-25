@@ -45,8 +45,8 @@ before_action :set_store, :analytics
 
     def analytics
 
-    	@delivered_today = @store.orders.where("delivery_date == '#{Time.now.to_date}' AND delivery_status=='Done'").count
-    	@trailed_today = @store.orders.where("trail_date == '#{Time.now.to_date}' AND trail_status=='Done'").count
+    	@delivered_today = @store.orders.where("delivery_date = '#{Time.now.to_date}' AND delivery_status ='Done'").count
+    	@trailed_today = @store.orders.where("trail_date = '#{Time.now.to_date}' AND trail_status ='Done'").count
   
     	
     end
