@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-before_action :set_store
+before_action :set_store, :analytics
 
 	def today_trails
 		@trails_for_today = @store.orders.where("trail_date = '#{Time.now.to_date}'").where("trail_status = 'Not Done'")
@@ -41,6 +41,14 @@ before_action :set_store
 
 	def set_store
        @store =  logged_in_store
+    end
+
+    def analytics
+
+    	@delivered_today = @store.orders.where("delivery_date == '#{Time.now.to_date}' AND delivery_status=='Done'").count
+    	@trailed_today = @store.orders.where("trail_date == '#{Time.now.to_date}' AND trail_status=='Done'").count
+  
+    	
     end
 
 end

@@ -36,12 +36,12 @@
 
   <div class="row">
     <div class="col-2"><%= form.label :date_of_birth %> </div>
-    <div class="col-2"><%= form.date_select :date_of_birth %> </div>
+    <div class="col-4"><%= form.date_select :date_of_birth, start_year: 1900 %> </div>
   </div>
 
   <div class="row">
     <div class="col-2"><%= form.label :date_of_anniversary %></div>
-    <div class="col-2"><%= form.date_select :date_of_anniversary %> </div>
+    <div class="col-4"><%= form.date_select :date_of_anniversary, start_year: 1900 %> </div>
   </div>
 
   <div class="row">

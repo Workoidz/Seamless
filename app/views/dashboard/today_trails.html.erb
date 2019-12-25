@@ -35,12 +35,20 @@
 		<div class="col-8">
 		  <h1>To-do's For <i><%=Time.now.to_date%></i></h1>
 		</div>
-		<div class="col-4">
+
+    <div class="col-4">
+      <div class="container">
+        <div class="row"><h5><i>Trail's Done Today : </i><%=@trailed_today%></h5></div>
+        <div class="row"><h5><i>Deliveries Done Today : </i> <%=@delivered_today%></h5></div>
+      </div>
+    </div>
+
+		<!--<div class="col-4">
 			<div class="container">
 				<div class="row"><h3><a href="<%=store_customers_path(@store)%>"><button class="btn btn-xs btn-primary has-icon"><%=@store.store_name%>'s Customers</button></a></h3></div>
 				<div class="row"><h3><a href="<%= dashboard_today_deliveries_path %>"><button class="btn btn-xs btn-primary has-icon">Deliveries</button></a></h3></div>
 			</div>
-		</div>
+		</div>-->
 	</div>
 	</div> <br>
 
