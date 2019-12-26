@@ -39,6 +39,12 @@ before_action :set_store, :analytics
 		
 	end
 
+	def all
+
+		@all = @store.orders.order(id: :desc)
+		
+	end
+
 	def set_store
        @store =  logged_in_store
     end
