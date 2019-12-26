@@ -18,7 +18,7 @@ before_action :set_store, :analytics
 		@customer = @searched_customer = @store.customers.where("contact_number = '#{params['search_customer']}'").first
 		
 		if @searched_customer == nil then
-			redirect_to dashboard_today_trails_path, notice: "No Customer Found"
+			redirect_to request.env["HTTP_REFERER"], notice: "No Customer Found"
 		else
 			@orders = @customer.orders
 		end
@@ -32,7 +32,7 @@ before_action :set_store, :analytics
 		@order = @searched_order = @store.orders.find_by id: ord
 
 		if @order == nil then 
-			redirect_to dashboard_today_trails_path, notice: " NO Order found " 
+			redirect_to request.env["HTTP_REFERER"], notice: "No Order Found"
 		else
 			@customer = @store.customers.find_by id: @order.customer_id
 		end
