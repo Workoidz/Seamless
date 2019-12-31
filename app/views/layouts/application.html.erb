@@ -17,7 +17,11 @@
 
     <% if logged_in? %>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+
+        <div class="row">
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#"><%=logged_in_store.store_name%></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,6 +52,9 @@
           </div>
         </nav>
 
+        </div>
+        <br>
+      </div>
       <!--<div style='float: left'>
         <<div class="container">
         <div class="row"><h3><a href="<%=store_customers_path(@store)%>"><button class="btn btn-xs btn-primary has-icon"><%=@store.store_name%>'s Customers</button></a></h3></div>
