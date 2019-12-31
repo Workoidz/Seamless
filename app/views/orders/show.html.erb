@@ -8,9 +8,9 @@
   
   <div class="container">
     <div class="row"><h1>Order No. : <%= @order.id %> <a href="<%= edit_store_customer_order_path(@store,@customer,@order) %>"><button class="btn btn-xs btn-primary has-icon">Edit</button></a> | | <a href="<%=store_customer_orders_path(@store,@customer) %>"><button class="btn btn-xs btn-primary has-icon">Back</button></a> 
-      <!--<%= link_to 'Edit', edit_store_customer_order_path(@store,@customer,@order) %> |<%= link_to 'Back', store_customer_orders_path(@store,@customer) %>--></h1></div>
+      <!--<%= link_to 'Edit', edit_store_customer_order_path(@store,@customer,@order) %> |<%= link_to 'Back', store_customer_orders_path(@store,@customer) %>--></h1></div><br>
 
-    </div>
+    
     <div class="row"><h5>For <%=@customer.customer_name%> ( <%=@customer.contact_number%> ) <i>Dated : <%= @order.order_date %></i></h5>
     </div>
 
@@ -45,8 +45,9 @@
       <% else %>
           <%= render @order.order_measurement %>
       <% end %>
+      
     </div>   
-    <br>
+    <br> 
 
     <div class="container">
       <div class="row"><h1>Shirt Styles :</h1></div>
