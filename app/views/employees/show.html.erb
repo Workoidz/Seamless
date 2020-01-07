@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<div class="container shadow">
+
+<div class="row"><p id="notice"><%= notice %></p></div>
 
 <p>
   <strong>Employee name:</strong>
@@ -10,11 +12,11 @@
   <%= @employee.mobile %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Password digest:</strong>
   <%= @employee.password_digest %>
 </p>
-
+ -->
 <p>
   <strong>Role:</strong>
   <%= @employee.role %>
@@ -37,3 +39,4 @@
 
 <%= link_to 'Edit', edit_store_employee_path(@store,@employee) %> |
 <%= link_to 'Back', store_employees_path(@store) %>
+</div>

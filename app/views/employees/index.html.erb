@@ -1,17 +1,23 @@
-<p id="notice"><%= notice %></p>
 
+<div class="container shadow">
+<div class="row">
+<p id="notice"><%= notice %></p>
+</div>
+
+<div class="row">
 <h1>Employees ( Mobile No, will be login id, with password )</h1>
+</div>
 
 <table>
   <thead>
     <tr>
       <th>Employee name</th>
       <th>Mobile</th>
-      <th>Password digest</th>
+      <!-- <th>Password digest</th> -->
       <th>Role</th>
       <th>Email</th>
       <th>Aadhar card no</th>
-      <th>Store</th>
+      <!-- <th>Store</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,11 +27,11 @@
       <tr>
         <td><%= employee.employee_name %></td>
         <td><%= employee.mobile %></td>
-        <td><%= employee.password_digest %></td>
+        <!-- <td><%= employee.password_digest %></td> -->
         <td><%= employee.role %></td>
         <td><%= employee.email %></td>
         <td><%= employee.aadhar_card_no %></td>
-        <td><%= employee.store_id %></td>
+        <!-- <td><%= employee.store_id %></td> -->
         <td><%= link_to 'Show', store_employee_path(@store,employee) %></td>
         <td><%= link_to 'Edit', edit_store_employee_path(@store,employee) %></td>
         <td><%= link_to 'Destroy', [@store,employee], method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -37,3 +43,4 @@
 <br>
 
 <%= link_to 'New Employee', new_store_employee_path(@store) %>
+</div>

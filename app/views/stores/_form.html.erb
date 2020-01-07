@@ -1,3 +1,16 @@
+<style type="text/css">
+  .container{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .row{
+    padding-top: 5px;
+  }
+  
+  
+</style>
+
+
 <%= form_with(model: store, local: true) do |form| %>
   <% if store.errors.any? %>
     <div id="error_explanation">
@@ -11,7 +24,7 @@
     </div>
   <% end %>
 
-  <div class="container">
+  <div class="container shadow">
 
   <div class="row">  
   <div class="field col-4 col-sm-5 col-md-3">

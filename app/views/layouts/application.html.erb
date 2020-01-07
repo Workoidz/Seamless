@@ -68,9 +68,11 @@
       <div style='float: right;'>Logged in as : <b><%= logged_in_employee.employee_name %> <%= link_to "logout",logout_path %></b></div>-->
 
     <%end%>
-    <br>
+    <br><br>
 
+    <div class="container shadow">
     <%= yield %>
+    </div>
 
     <br>
 
