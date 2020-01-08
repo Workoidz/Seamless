@@ -32,11 +32,13 @@
   <%= @employee.aadhar_card_no %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Store:</strong>
   <%= @employee.store_id %>
-</p>
+</p> -->
 
-<%= link_to 'Edit', edit_store_employee_path(@store,@employee) %> |
-<%= link_to 'Back', store_employees_path(@store) %>
+<button><%= link_to 'Edit', edit_store_employee_path(@store,@employee) %></button> |
+<button><%= link_to 'Back', store_employees_path(@store) %></button>
+
 </div>
+

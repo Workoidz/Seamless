@@ -11,34 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :employee_name %>
-    <%= form.text_field :employee_name %>
+<div class="row">
+      <div class="col-3"><%= form.label :employee_name %></div>
+      <div class="col-3"><%= form.text_field :employee_name %></div>  
+</div>
+
+
+  <div class="row">
+      <div class="col-3"><%= form.label :mobile %></div>    
+      <div class="col-3"><%= form.text_field :mobile %></div> 
+  </div>
+  
+
+  <div class="row">
+    <div class="col-3"><%= form.label :password %></div> 
+    <div class="col-3"><%= form.text_field :password %></div> 
   </div>
 
-  <div class="field">
-    <%= form.label :mobile %>
-    <%= form.text_field :mobile %>
+  <div class="row">
+    <div class="col-3"><%= form.label :role %></div> 
+    <div class="col-3"><%= form.text_field :role %></div> 
   </div>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password %>
+  <div class="row">
+    <div class="col-3"><%= form.label :email %></div> 
+    <div class="col-3"><%= form.text_field :email %></div> 
   </div>
 
-  <div class="field">
-    <%= form.label :role %>
-    <%= form.text_field :role %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :aadhar_card_no %>
-    <%= form.text_field :aadhar_card_no %>
+  <div class="row">
+    <div class="col-3"><%= form.label :aadhar_card_no %></div> 
+    <div class="col-3"><%= form.text_field :aadhar_card_no %></div> 
   </div>
 
   <!-- <div class="field">
@@ -46,7 +48,7 @@
     <%= form.text_field :store_id %>
   </div> -->
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="row actions">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

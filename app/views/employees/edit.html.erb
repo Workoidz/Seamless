@@ -1,6 +1,9 @@
+<div class="row">
 <h1>Editing Employee</h1>
+</div>
 
 <%= render 'form', employee: @employee %>
-
-<%= link_to 'Show', [@store,@employee] %> |
-<%= link_to 'Back', store_employees_path(@store) %>
+<div class="row">
+<%= link_to 'Show', [@store,@employee] , class: "btn btn-secondary" %> |
+<%= link_to 'Back', store_employees_path(@store) , class: "btn btn-secondary" %>
+</div>

@@ -5,6 +5,7 @@
 </div>
 
 <div class="row">
+
 <h1>Employees ( Mobile No, will be login id, with password )</h1>
 </div>
 
@@ -32,9 +33,9 @@
         <td><%= employee.email %></td>
         <td><%= employee.aadhar_card_no %></td>
         <!-- <td><%= employee.store_id %></td> -->
-        <td><%= link_to 'Show', store_employee_path(@store,employee) %></td>
-        <td><%= link_to 'Edit', edit_store_employee_path(@store,employee) %></td>
-        <td><%= link_to 'Destroy', [@store,employee], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', store_employee_path(@store,employee) , class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_store_employee_path(@store,employee) , class: "btn btn-info" %></td>
+        <td><%= link_to 'Destroy', [@store,employee], class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,5 +43,6 @@
 
 <br>
 
-<%= link_to 'New Employee', new_store_employee_path(@store) %>
+<%= link_to 'New Employee', new_store_employee_path(@store) , class: "btn btn-primary" %>
+
 </div>

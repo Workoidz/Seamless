@@ -59,7 +59,7 @@
 
       		<div class=" order-view card shadow col-12 col-sm-6 col-md-4 col-lg-3">
         
-        		<a href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>"><strong><i>Order No : <%= order.id %></i></strong></a><br>
+        		<a class="btn btn-primary" href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>"><strong><i>Order No : <%= order.id %></i></strong></a><br>
         		<b>Trail Date :</b> <%= order.trail_date %> Status : <%= order.trail_status %> <br>
         		<b>Delivery Date :</b> <%= order.delivery_date %> Status: <%= order.delivery_status %>
 
@@ -76,9 +76,13 @@
 
       		<div class=" order-view card shadow col-12 col-sm-6 col-md-4 col-lg-3">
         
-        		<a href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>"><strong><i>Order No : <%= order.id %></i></strong></a><br>
+        		<a class="btn btn-primary" href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>"><strong><i>Order No : <%= order.id %></i></strong></a><br>
         		<b>Trail Date :</b> <%= order.trail_date %> Status : <%= order.trail_status %> <br>
         		<b>Delivery Date :</b> <%= order.delivery_date %> Status: <%= order.delivery_status %>
+
+            <div class="card-footer text-muted">
+              <%= (Time.now.to_date - order.delivery_date).to_i %> days delayed
+            </div>
 
       		</div>
       
@@ -93,9 +97,13 @@
 
       		<div class=" order-view card shadow col-12 col-sm-6 col-md-4 col-lg-3">
         
-        		<a href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>"><strong><i>Order No : <%= order.id %></i></strong></a><br>
+        		<a class="btn btn-primary" href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>"><strong><i>Order No : <%= order.id %></i></strong></a><br>
         		<b>Trail Date :</b> <%= order.trail_date %> Status : <%= order.trail_status %> <br>
         		<b>Delivery Date :</b> <%= order.delivery_date %> Status: <%= order.delivery_status %>
+
+            <div class="card-footer text-muted">
+              After <%= (order.delivery_date - Time.now.to_date).to_i %> days
+            </div>
 
       		</div>
       
