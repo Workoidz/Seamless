@@ -2,4 +2,5 @@
 
 <%= render 'form', trouser_style: @trouser_style %>
 
-<%= link_to 'Back', store_customer_order_path(@store,@customer,@order) %>
+<div class="row"><%= link_to 'Back', store_customer_order_path(@store,@customer,@order) , class: "btn btn-secondary" %></div>
+

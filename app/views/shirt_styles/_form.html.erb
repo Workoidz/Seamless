@@ -1,4 +1,73 @@
+<style type="text/css">
+  .form-row{
+    padding-top: 10px;
+  }
+</style>
 
+
+  <div class="container">
+  <%= form_with(model: [@store,@customer,@order,shirt_style], local: true) do |form| %>
+  <form>
+  <div class="form-row">
+    <div class="col">
+      <label>Style For :</label> <%= form.text_field :style_for , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+   </div>
+    
+   <div class="form-row">
+    <div class="col">
+      <label>Style :</label> <%= form.text_field :style , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+    <div class="col">
+      <label>Lapel :</label> <%= form.text_field :lapel , class: "form-control" %>
+    </div>
+   </div> 
+    
+   <div class="form-row">
+    <div class="col">
+      <label>Vent :</label> <%= form.text_field :vent , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+    <div class="col">
+      <label>Pocket :</label> <%= form.text_field :pocket , class: "form-control" %>
+    </div>
+   </div>  
+
+   <div class="form-row">
+    <div class="col">
+      <label>fit :</label> <%= form.text_field :fit , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+    <div class="col">
+      <label>Sleeve Placket :</label> <%= form.text_field :sleeve_placket , class: "form-control" %>
+    </div>
+   </div> 
+
+   <div class="form-row">
+    <div class="col">
+      <label>Front Cut :</label> <%= form.text_field :front_cut , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+   </div> 
+
+   <div class="form-row">
+    <div class="col">
+      <label>Master Comment :</label> <%= form.text_area :master_comment , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+   </div> 
+
+   <div class="form-row"><%= form.submit class: "btn btn-primary" %></div>
+   </form>
+  <% end %>
+
+</div>
+<br>
+
+
+<!--
 <%= form_with(model: [@store,@customer,@order,shirt_style], local: true) do |form| %>
 
     <div class="container">

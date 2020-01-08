@@ -1,3 +1,75 @@
+<style type="text/css">
+  .form-row{
+    padding-top: 10px;
+  }
+</style>
+
+
+  <div class="container">
+  <%= form_with(model: [@store,@customer,@order,trouser_style], local: true) do |form| %>
+  <form>
+  <div class="form-row">
+    <div class="col">
+      <label>Style For :</label> <%= form.text_field :style_for , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+   </div>
+    
+   <div class="form-row">
+    <div class="col">
+      <label>Belt :</label> <%= form.text_field :belt , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+    <div class="col">
+      <label>Pleat :</label> <%= form.text_field :pleat , class: "form-control" %>
+    </div>
+   </div> 
+    
+   <div class="form-row">
+    <div class="col">
+      <label>Pocket :</label> <%= form.text_field :pocket , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+    <div class="col">
+      <label>Back Pocket :</label> <%= form.text_field :back_pocket , class: "form-control" %>
+    </div>
+   </div>  
+
+   <div class="form-row">
+    <div class="col">
+      <label>Bottom :</label> <%= form.text_field :bottom , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+    <div class="col">
+      <label>Loops :</label> <%= form.text_field :loops , class: "form-control" %>
+    </div>
+   </div> 
+
+   <div class="form-row">
+    <div class="col">
+      <label>Fit :</label> <%= form.text_field :fit , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+   </div> 
+
+   <div class="form-row">
+    <div class="col">
+      <label>Master Comment :</label> <%= form.text_area :master_comment , class: "form-control" %>
+      <!-- <input type="text" class="form-control" placeholder="First name"> -->
+    </div>
+   </div> 
+
+   <div class="form-row"><%= form.submit class: "btn btn-primary" %></div>
+   </form>
+  <% end %>
+
+</div>
+<br>
+
+
+
+
+<!--
 <%= form_with(model: [@store,@customer,@order,trouser_style], local: true) do |form| %>
 
       <div class="container">
@@ -36,7 +108,7 @@
 <%end%>
 
 
-<!--<%= form_with(model: [@store,@customer,@order,trouser_style], local: true) do |form| %>
+<%= form_with(model: [@store,@customer,@order,trouser_style], local: true) do |form| %>
   <% if trouser_style.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(trouser_style.errors.count, "error") %> prohibited this trouser_style from being saved:</h2>

@@ -2,5 +2,5 @@
 
 <%= render 'form', shirt_style: @shirt_style %>
 
+<div class="row"><%= link_to 'Back', store_customer_order_path(@store,@customer,@order) , class: "btn btn-secondary" %></div>
 
-<%= link_to 'Back', store_customer_order_path(@store,@customer,@order) %>
