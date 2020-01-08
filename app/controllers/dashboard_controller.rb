@@ -3,14 +3,14 @@ before_action :set_store, :analytics
 
 	def today_trails
 		@trails_for_today = @store.orders.where("trail_date = '#{Time.now.to_date}'").where("trail_status = 'Not Done'")
-		@trails_delayed = @store.orders.where("trail_date < '#{Time.now.to_date}'").where("trail_status = 'Not Done'")
-		@trails_upcoming = @store.orders.where("trail_date > '#{Time.now.to_date}'").where("trail_status = 'Not Done'")
+		@trails_delayed = @store.orders.where("trail_date < '#{Time.now.to_date}'").where("trail_status = 'Not Done'").order(trail_date: :asc)
+		@trails_upcoming = @store.orders.where("trail_date > '#{Time.now.to_date}'").where("trail_status = 'Not Done'").order(trail_date: :asc)
 	end
 
 	def today_deliveries
 		@deliveries_for_today = @store.orders.where("delivery_date = '#{Time.now.to_date}'").where("delivery_status = 'Not Done'")
-		@deliveries_delayed = @store.orders.where("delivery_date < '#{Time.now.to_date}'").where("delivery_status = 'Not Done'")
-		@deliveries_upcoming = @store.orders.where("delivery_date > '#{Time.now.to_date}'").where("delivery_status = 'Not Done'")
+		@deliveries_delayed = @store.orders.where("delivery_date < '#{Time.now.to_date}'").where("delivery_status = 'Not Done'").order(delivery_date: :asc)
+		@deliveries_upcoming = @store.orders.where("delivery_date > '#{Time.now.to_date}'").where("delivery_status = 'Not Done'").order(delivery_date: :asc)
 	end
 
 	def search_customer
