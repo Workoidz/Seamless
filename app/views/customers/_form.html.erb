@@ -15,43 +15,43 @@
 <div class="container">
   
   <div class="row">
-    <div class="col-2"><%= form.label :customer_name %> </div>
-    <div class="col-2"><%= form.text_field :customer_name %> </div>
+    <div class="col-4"><%= form.label :customer_name %> </div>
+    <div class="col-4"><%= form.text_field :customer_name %> </div>
   </div>
 
   <div class="row">
-    <div class="col-2"><%= form.label :contact_number %></div>
-    <div class="col-2"><%= form.text_field :contact_number %></div>
+    <div class="col-4"><%= form.label :contact_number %></div>
+    <div class="col-4"><%= form.text_field :contact_number %></div>
   </div>
 
   <div class="row">
-    <div class="col-2"><%= form.label :email %> </div>
-    <div class="col-2"><%= form.text_field :email %> </div>
+    <div class="col-4"><%= form.label :email %> </div>
+    <div class="col-4"><%= form.text_field :email %> </div>
   </div>
 
   <div class="row">
-    <div class="col-2"><%= form.label :address %> </div>
-    <div class="col-2"><%= form.text_area :address %> </div>
+    <div class="col-4"><%= form.label :address %> </div>
+    <div class="col-4"><%= form.text_area :address %> </div>
   </div>
 
   <div class="row">
-    <div class="col-2"><%= form.label :date_of_birth %> </div>
+    <div class="col-4"><%= form.label :date_of_birth %> </div>
     <div class="col-4"><%= form.date_select :date_of_birth, start_year: 1900 %> </div>
   </div>
 
   <div class="row">
-    <div class="col-2"><%= form.label :date_of_anniversary %></div>
+    <div class="col-4"><%= form.label :date_of_anniversary %></div>
     <div class="col-4"><%= form.date_select :date_of_anniversary, start_year: 1900 %> </div>
   </div>
 
   <div class="row">
-    <div class="col-2"><%= form.label :profile %> </div>
-    <div class="col-2"><%= form.text_field :profile %> </div>
+    <div class="col-4"><%= form.label :profile %> </div>
+    <div class="col-4"><%= form.text_field :profile %> </div>
   </div>
 
   <div class="row">
-    <div class="col-2"> </div>
-    <div class="col-2"><%= form.submit %> </div>
+    <div class="col-4"> </div>
+    <div class="col-4"><%= form.submit class: "btn btn-primary" %> </div>
   </div>
 
 </div>

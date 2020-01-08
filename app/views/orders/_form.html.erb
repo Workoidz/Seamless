@@ -15,7 +15,7 @@
     </div>
     <div class="row"><p><br><strong>Accounts :</strong></p></div>
     <div class="row">
-      <div class="col-12 col-sm-6">
+      <div class="col-10 col-sm-6">
          <%= form.label :fabric_cost %> : <%= form.number_field :fabric_cost %><br>
          <%= form.label :fabric_advance %> : <%= form.number_field :fabric_advance %>
         
@@ -27,16 +27,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-3">
+      <div class="col-10 col-sm-3">
       <strong><%= form.label :balance_clear_status %></strong> : </div>
-      <div class="col-3">
+      <div class="col-10 col-sm-3">
       <%= radio_button "order","balance_clear_status","Not Clear" %> Not Clear <%= radio_button "order","balance_clear_status","Clear" %> Clear</div> 
     </div>
     <div class="row"><p><br><%= form.label :remark %> : <%= form.text_area :remark %></p></div>
     
     <div class="row">
       <p>
-        <div class="actions"><%= form.submit %>
+        <div class="actions"><%= form.submit class: "btn btn-primary" %>
       </p>
   </div>
     </div>

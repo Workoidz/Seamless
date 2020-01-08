@@ -23,7 +23,7 @@
     
     <% @customers.each do |customer| %>
 
-      <div class=" customer-view shadow card col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class=" customer-view shadow card col-11 col-sm-6 col-md-4 col-lg-3">
         <strong><i><%= link_to customer.customer_name, store_customer_orders_path(@store,customer) %></i></strong>
         <%= customer.contact_number %><br>
         <%= link_to 'Show', store_customer_path(@store,customer) %>
