@@ -4,13 +4,13 @@
   <div class="row"><h5><strong>Style for:</strong><%= trouser_style.style_for %> <a href="<%= edit_store_customer_order_trouser_style_path(@store,@customer,@order,trouser_style) %>"><button class="btn btn-xs btn-primary has-icon">Edit..!</button></a><!--<%= link_to ' Click to Edit', edit_store_customer_order_trouser_style_path(@store,@customer,@order,trouser_style) %>--></h5></div>
 
   <div class="row">
-    <div class="col-4">
+    <div class="col-12 col-md-6">
       <strong>Belt : </strong><%= trouser_style.belt %><br>
       <strong>Pleat : </strong><%= trouser_style.pleat %><br>
       <strong>Pocket : </strong><%= trouser_style.pocket %><br>
       <strong>Back Pocket:</strong><%= trouser_style.back_pocket %>
     </div>
-    <div class="col-4">
+    <div class="col-12 col-md-6">
       <strong>Bottom : </strong><%= trouser_style.bottom %><br>
       <strong>Loops : </strong><%= trouser_style.loops %><br>
       <strong>Fit : </strong><%= trouser_style.fit %>
@@ -19,7 +19,7 @@
   </div>
 
   <div class="row">
-    <div class="col-10">
+    <div class="col-12">
     <p>
       <strong>Master comment:</strong>
       <i><%= trouser_style.master_comment %></i>

@@ -1,4 +1,94 @@
+<style type="text/css">
+  .form-row{
+    padding-top: 10px;
+  }
+</style>
 
+<%= form_with(model: [@store,@customer,@order], local: true) do |form| %>
+
+<div class="form-row">
+  <div class="col">
+    <label>Order Date :&nbsp;</label><%= form.date_select :order_date , class: "form-control" %>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="col">
+    <label>Trail Date :&nbsp;</label><%= form.date_select :trail_date , class: "form-control" %>
+  </div>
+  <div class="col">
+    <label>Delivery Date :&nbsp;</label><%= form.date_select :delivery_date %>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="col">
+    <label class="form-check-label">Status : </label>
+    <div class="form-check form-check-inline">
+      
+    &nbsp;<%= radio_button "order","trail_status","Not Done" ,class: "form-check-input" %><label class="form-check-label"> Not Done&nbsp;</label><%= radio_button "order","trail_status","Done" , class: "form-check-input" %> <label class="form-check-label"> Done</label>
+    </div>
+  </div>
+
+  <div class="col">
+    <label class="form-check-label">Status : </label>
+    <div class="form-check form-check-inline">
+      
+    &nbsp;<%= radio_button "order","delivery_status","Not Done" ,class: "form-check-input" %> <label class="form-check-label">Not Done &nbsp;</label><%= radio_button "order","delivery_status","Done" , class: "form-check-input" %> <label class="form-check-label">Done</label>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="form-row">
+  <h3>Accounts :</h3>
+</div>
+
+<div class="form-row">
+  <div class="col">
+    <label>Fabric Cost :</label><%= form.number_field :fabric_cost , class: "form-control" %>
+  </div>
+  <div class="col">
+    <label>Stitching Cost :</label><%= form.number_field :stitching_cost , class: "form-control" %>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="col">
+    <label>Fabric Advance :</label><%= form.number_field :fabric_advance , class: "form-control" %>
+  </div>
+  <div class="col">
+    <label>Stitching Advance :</label><%= form.number_field :stitching_advance , class: "form-control" %>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="col">
+    <label class="form-check-label"><strong>Balance Clear Status : </strong></label>
+    <div class="form-check form-check-inline">
+      
+    &nbsp;<%= radio_button "order","balance_clear_status","Not Clear" ,class: "form-check-input" %><label class="form-check-label"> Not Clear &nbsp;</label><%= radio_button "order","balance_clear_status","Clear" , class: "form-check-input" %> <label class="form-check-label"> Clear</label>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="form-row">
+  <div class="col">
+    <label>Remarks :</label><%= form.text_area :remark , class: "form-control" %>
+  </div>
+</div>
+
+<div class="form-row">
+ <%= form.submit class: "btn btn-primary" %>
+</div>  
+
+<% end %>
+<br>
+
+
+
+<!-- 
 <%= form_with(model: [@store,@customer,@order], local: true) do |form| %>
 
   <div class="container">
@@ -43,7 +133,7 @@
 
   </div>
 
-<% end %>
+<% end %> -->
 
 
 <!--<%= form_with(model: [@store,@customer,@order], local: true) do |form| %>

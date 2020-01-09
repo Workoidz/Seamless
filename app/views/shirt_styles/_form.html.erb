@@ -7,7 +7,7 @@
 
   <div class="container">
   <%= form_with(model: [@store,@customer,@order,shirt_style], local: true) do |form| %>
-  <form>
+  <!-- <form> -->
   <div class="form-row">
     <div class="col">
       <label>Style For :</label> <%= form.text_field :style_for , class: "form-control" %>
@@ -60,7 +60,7 @@
    </div> 
 
    <div class="form-row"><%= form.submit class: "btn btn-primary" %></div>
-   </form>
+   <!-- </form> -->
   <% end %>
 
 </div>

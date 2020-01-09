@@ -13,7 +13,7 @@ td{
 
 
 
-<div class="container">
+<!-- <div class="container"> -->
   
   <div class="row"><h1>Body Posture & Measurements <a href="<%= edit_store_customer_order_order_measurement_path(@store,@customer,@order,order_measurement) %>"><button class="btn btn-xs btn-primary has-icon">click to Edit.!</button></a> <!--<%= link_to 'Click to Edit', edit_store_customer_order_order_measurement_path(@store,@customer,@order,order_measurement) %>--></h1></div>
   <div class="row"><h6>For <%=@customer.customer_name%></h6></div>
@@ -23,7 +23,7 @@ td{
   <div class="row"><h3>Upper Body Posture</h3></div>
 
   <div class="row">
-    <div class="col-12 col-sm-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <h6>Body Shape</h6> <br>
       <img height="200px" width="300" src="<%=asset_url("back-shape.jpg")%>"><br>
       <table>
@@ -32,7 +32,7 @@ td{
                                      
     </div>
 
-    <div class="col-12 col-sm-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <h6>Stomach</h6> <br>
       <img height="200px" width="300" src="<%=asset_url("stomach.jpg")%>"><br>
       <table>
@@ -40,7 +40,7 @@ td{
       </table>
     </div>
 
-    <div class="col-12 col-sm-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <h6>Shoulder Type</h6> <br>
       <img height="200px" width="300" src="<%=asset_url("shoulder.jpg")%>"><br>
       <table>
@@ -57,10 +57,10 @@ td{
   <div class="row"><h3>Lower Body Posture</h3></div>
 
   <div class="row">
-    <div class="col-12 col-sm-5">
+    <div class="col-12">
       
       <img height="200px" width="400" src="<%=asset_url("lower-body-posture.jpg")%>"><br>
-      <table>
+      <table width="400">
         <tr><% if order_measurement.lower_body_posture == "Knock Knee" then %><td bgcolor="#00f"><%else%><td><%end%>Knock Knee</td><% if order_measurement.lower_body_posture == "Joint Thigh" then %><td bgcolor="#00f"><%else%><td><%end%>Joint Thigh</td><% if order_measurement.lower_body_posture == "Bow Leg" then %><td bgcolor="#00f"><%else%><td><%end%>Bow Leg</td><% if order_measurement.lower_body_posture == "Prominent Thigh" then %><td bgcolor="#00f"><%else%><td><%end%>Prominent Thigh</td></tr>
       </table>
       
@@ -76,25 +76,32 @@ td{
   <div class="row"><h3>Upper Body Measurements</h3></div>
 
   <div class="row">
-    <div class="col-4 col-sm-4">
-      Length : <%= order_measurement.jacket_or_shirt_length %> <br>
-      Shoulder : <%= order_measurement.jacket_or_shirt_shoulder %><br>
-      Sleeve Length : <%= order_measurement.jacket_or_shirt_sleeve_length %><br>
-      Chest : <%= order_measurement.jacket_or_shirt_chest %><br>
+    <div class="col-12 col-sm-4">
+      Length : <strong><%= order_measurement.jacket_or_shirt_length %></strong> <br>
+      Shoulder : <strong><%= order_measurement.jacket_or_shirt_shoulder %></strong><br>
+    </div>
+    <div class="col-12 col-sm-4">
+      Sleeve Length : <strong><%= order_measurement.jacket_or_shirt_sleeve_length %></strong><br>
+      Chest : <strong><%= order_measurement.jacket_or_shirt_chest %></strong><br>
+     </div> 
+    
+
+    <div class="col-12 col-sm-4">
+        Waist : <strong><%= order_measurement.jacket_or_shirt_waist %></strong><br>
+        Neck : <strong><%= order_measurement.jacket_or_shirt_neck %></strong><br>
+    </div>
+    <div class="col-12 col-sm-4">
+        Hip : <strong><%= order_measurement.jacket_or_shirt_hip %></strong><br>
+        Hale Back : <strong><%= order_measurement.jacket_or_shirt_hale_back %></strong><br>
     </div>
 
-    <div class="col-4 col-sm-4">
-        Waist : <%= order_measurement.jacket_or_shirt_waist %><br>
-        Neck : <%= order_measurement.jacket_or_shirt_neck %><br>
-        Hip: <%= order_measurement.jacket_or_shirt_hip %><br>
-        Hale Back :<%= order_measurement.jacket_or_shirt_hale_back %><br>
+    <div class="col-12 col-sm-4">
+        Cross Back : <strong></style> <%= order_measurement.jacket_or_shirt_cross_back %></strong><br>
+        Bicep : <strong><%= order_measurement.jacket_or_shirt_bicep %></strong><br>
     </div>
-
-    <div class="col-4 col-sm-4">
-        Cross Back : <%= order_measurement.jacket_or_shirt_cross_back %><br>
-        Bicep : <%= order_measurement.jacket_or_shirt_bicep %><br>
-        Cross Front : <%= order_measurement.jacket_or_shirt_cross_front %><br>
-        Arm Hole Round :<%= order_measurement.jacket_or_shirt_arm_hole_round %><br>
+    <div class="col-12 col-sm-4">
+        Cross Front : <strong><%= order_measurement.jacket_or_shirt_cross_front %></strong><br>
+        Arm Hole Round : <strong><%= order_measurement.jacket_or_shirt_arm_hole_round %></strong><br>
     </div>
   </div>
   
@@ -106,30 +113,30 @@ td{
   <div class="row"><h3>Lower Body Measurements</h3></div>
 
   <div class="row">
-    <div class="col-4 col-sm-4">
-        Length : <%= order_measurement.trouser_length %><br>
-        Crotch : <%= order_measurement.trouser_crotch %><br>
-        Inseam : <%= order_measurement.trouser_inseam %><br>
+    <div class="col-12 col-sm-4">
+        Length : <strong><%= order_measurement.trouser_length %></strong><br>
+        Crotch : <strong><%= order_measurement.trouser_crotch %></strong><br>
+        Inseam : <strong><%= order_measurement.trouser_inseam %></strong><br>
         
     </div>
 
-    <div class="col-4 col-sm-4">
-        Waist : <%= order_measurement.trouser_waist %><br>
-        Hip : <%= order_measurement.trouser_hip %><br>
-        Knee : <%= order_measurement.trouser_knee %><br>
+    <div class="col-12 col-sm-4">
+        Waist : <strong><%= order_measurement.trouser_waist %></strong><br>
+        Hip : <strong><%= order_measurement.trouser_hip %></strong><br>
+        Knee : <strong><%= order_measurement.trouser_knee %></strong><br>
         
     </div>
 
-    <div class="col-4 col-sm-4">
-         Thigh : <%= order_measurement.trouser_thigh %><br>
-         Bottom : <%= order_measurement.trouser_bottom %><br>
-         F - Low : <%= order_measurement.trouser_f_low %><br>
+    <div class="col-12 col-sm-4">
+         Thigh : <strong><%= order_measurement.trouser_thigh %></strong><br>
+         Bottom : <strong><%= order_measurement.trouser_bottom %></strong><br>
+         F - Low : <strong><%= order_measurement.trouser_f_low %></strong><br>
       
     </div>
   </div>
   
 
-  </div>
+  <!-- </div> -->
 <!--
 
   <h1> Body Posture & Measurements <%= link_to 'Click to Edit', edit_store_customer_order_order_measurement_path(@store,@customer,@order,order_measurement) %> </h1>

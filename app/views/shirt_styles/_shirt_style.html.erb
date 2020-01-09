@@ -5,24 +5,24 @@
      <a href="<%= edit_store_customer_order_shirt_style_path(@store,@customer,@order,shirt_style) %>"><button class="btn btn-xs btn-primary has-icon">Edit..!</button></a> <!--<%= link_to ' Click to Edit', edit_store_customer_order_shirt_style_path(@store,@customer,@order,shirt_style) %>--></h5></div>
 
   <div class="row">
-    <div class="col-4">
-      <strong>Style:</strong><%= shirt_style.style %><br>
-      <strong>Lapel:</strong><%= shirt_style.lapel %><br>
-      <strong>Vent:</strong><%= shirt_style.vent %><br>
-      <strong>Pocket:</strong><%= shirt_style.pocket %>
+    <div class="col-12 col-md-6">
+      <strong>Style : </strong><%= shirt_style.style %><br>
+      <strong>Lapel : </strong><%= shirt_style.lapel %><br>
+      <strong>Vent : </strong><%= shirt_style.vent %><br>
+      <strong>Pocket : </strong><%= shirt_style.pocket %>
     </div>
-    <div class="col-4">
-      <strong>Fit:</strong><%= shirt_style.fit %><br>
-      <strong>Sleeve placket:</strong><%= shirt_style.sleeve_placket %><br>
-      <strong>Front cut:</strong><%= shirt_style.front_cut %>
+    <div class="col-12 col-md-6">
+      <strong>Fit : </strong><%= shirt_style.fit %><br>
+      <strong>Sleeve placket : </strong><%= shirt_style.sleeve_placket %><br>
+      <strong>Front cut : </strong><%= shirt_style.front_cut %>
       
     </div>
   </div>
 
   <div class="row">
-    <div class="col-10">
+    <div class="col-12">
     <p>
-      <strong>Master comment:</strong>
+      <strong>Master comment : </strong>
       <i><%= shirt_style.master_comment %></i>
     </p>
     </div>
