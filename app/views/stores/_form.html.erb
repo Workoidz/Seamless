@@ -6,6 +6,9 @@
   .row{
     padding-top: 5px;
   }
+  .form-row{
+    padding-top: 10px;
+  }
 
   
 </style>
@@ -26,34 +29,42 @@
 
   <div class="container shadow">
 
-  <div class="row">  
-  <div class="field col-4 col-sm-5 col-md-3">
-    <%= form.label :store_name %>
-  </div>
-  <div class=" col-4 col-sm-5 col-md-3">
-    <%= form.text_field :store_name %>
-  </div>
-  </div>
-
-  <div class="row">  
-  <div class="field col-4 col-sm-5 col-md-3">
-    <%= form.label :contact_person_name %>
-  </div>
-  <div class=" col-4 col-sm-5 col-md-3">
-    <%= form.text_field :contact_person_name %>
-  </div>
-  </div>
-
-  <div class="row">  
-  <div class="field col-4 col-sm-5 col-md-3">
-    <%= form.label :address %>
-  </div>
-  <div class=" col-4 col-sm-5 col-md-3">
-    <%= form.text_area :address %>
-  </div>
-  </div>
-
+  <div class="form-row">  
+    <div class="col">
+  <!-- <div class="field col"> -->
+    <%= form.label :store_name %> : 
+  <!-- </div> -->
   
+    <%= form.text_field :store_name , class: "form-control" %>
+  </div>
+  </div>
+
+  <div class="form-row">  
+    <div class="col">
+  <!-- <div class="field col-4 col-sm-5 col-md-3"> -->
+      <%= form.label :contact_person_name %> :
+  <!-- </div> -->
+  <!-- <div class=" col-4 col-sm-5 col-md-3"> -->
+      <%= form.text_field :contact_person_name , class: "form-control" %>
+    </div>
+    </div>
+
+   <div class="form-row"> 
+    <div class="col">
+      <%= form.label :contact_number %> :
+      <%= form.text_field :contact_number , class: "form-control" %>
+
+    </div>
+  </div>
+
+  <div class="form-row">  
+  <div class="col">
+    <%= form.label :address %>
+    <%= form.text_area :address , class: "form-control" %>
+  </div>
+  </div>
+
+ <!--  
   <div class="row">  
   <div class="field col-4 col-sm-5 col-md-3">
     <%= form.label :contact_number %>
@@ -61,18 +72,20 @@
   <div class=" col-4 col-sm-5 col-md-3">
     <%= form.text_field :contact_number %>
   </div>
-  </div>
+  </div> -->
 
-  <div class="row">  
-  <div class="field col-4 col-sm-5 col-md-3">
+  <div class="form-row">  
+  <div class="col">
     <%= form.label :email %>
+    <%= form.text_field :email , class: "form-control" %>
   </div>
-  <div class=" col-4 col-sm-5 col-md-3">
-    <%= form.text_field :email %>
+  <div class="col">
+    <%= form.label :website %>
+    <%= form.text_field :website ,class: "form-control" %>
   </div>
   </div>
 
-  <div class="row">  
+  <!-- <div class="row">  
   <div class="field col-4 col-sm-5 col-md-3">
     <%= form.label :facebook_link %>
   </div>
@@ -106,28 +119,28 @@
   <div class=" col-4 col-sm-5 col-md-3">
     <%= form.text_field :instagram_link %>
   </div>
-  </div>
+  </div> -->
 
-  <div class="row">  
+  <!-- <div class="row">  
   <div class="field col-4 col-sm-5 col-md-3">
     <%= form.label :website %>
   </div>
   <div class=" col-4 col-sm-5 col-md-3">
     <%= form.text_field :website %>
   </div>
-  </div>
+  </div> -->
 
-  <div class="row">  
+  <!-- <div class="row">  
   <div class="field col-4 col-sm-5 col-md-3">
     <%= form.label :logo %>
   </div>
   <div class=" col-4 col-sm-5 col-md-3">
     <%= form.text_field :logo %>
   </div>
-  </div>
+  </div> -->
 
-  <div class="actions">
+  <div class="actions form-row">
     <%= form.submit class: "btn btn-primary" %>
-  </div>
+  </div> <br>
   </div>
 <% end %>

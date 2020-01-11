@@ -26,7 +26,7 @@ td{
     <div class="col-12 col-md-6 col-xl-4">
       <h6>Body Shape</h6> <br>
       <img height="200px" width="300" src="<%=asset_url("back-shape.jpg")%>"><br>
-      <table>
+      <table width="300">
         <tr><% if order_measurement.upper_body_back_shape == "Normal" then %><td bgcolor="#00f"><%else%><td><%end%>Normal</td><% if order_measurement.upper_body_back_shape == "Stooped" then %><td bgcolor="#00f"><%else%><td><%end%>Stooped</td><% if order_measurement.upper_body_back_shape == "Erect" then %><td bgcolor="#00f"><%else%><td><%end%>Erect</td></tr>
       </table>
                                      
@@ -35,7 +35,7 @@ td{
     <div class="col-12 col-md-6 col-xl-4">
       <h6>Stomach</h6> <br>
       <img height="200px" width="300" src="<%=asset_url("stomach.jpg")%>"><br>
-      <table>
+      <table width="300">
         <tr><% if order_measurement.upper_body_stomach == "Forward Stomach" then %><td bgcolor="#00f"><%else%><td><%end%>Forward Stomach</td><% if order_measurement.upper_body_stomach == "Stout" then %><td bgcolor="#00f"><%else%><td><%end%>Stout</td><% if order_measurement.upper_body_stomach == "Large" then %><td bgcolor="#00f"><%else%><td><%end%>Large</td></tr>
       </table>
     </div>
@@ -43,7 +43,7 @@ td{
     <div class="col-12 col-md-6 col-xl-4">
       <h6>Shoulder Type</h6> <br>
       <img height="200px" width="300" src="<%=asset_url("shoulder.jpg")%>"><br>
-      <table>
+      <table width="300">
         <tr><% if order_measurement.upper_body_shoulder == "Sloping" then %><td bgcolor="#00f"><%else%><td><%end%>Sloping</td><% if order_measurement.upper_body_shoulder == "Regular" then %><td bgcolor="#00f"><%else%><td><%end%>Regular</td><% if order_measurement.upper_body_shoulder == "Square" then %><td bgcolor="#00f"><%else%><td><%end%>Square</td></tr>
       </table>
     </div>
