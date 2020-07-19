@@ -50,7 +50,7 @@
     <br>
 
     <div class="container">
-      <div class="row"><h1>JACKET / SHIRT MEASUREMENT :</h1></div>
+      <div class="row"><h1>JACKET / SHIRT :</h1></div>
 
           <% if @order.shirt_styles == nil %>
             <h3><%= link_to 'Add a shirt_style',new_store_customer_order_shirt_style_path(@store,@customer,@order) %></h3>
@@ -62,7 +62,7 @@
 
     <br>
     <div class="container">
-      <div class="row"><h1>TROUSER MEASUREMENT :</h1></div>
+      <div class="row"><h1>TROUSER :</h1></div>
 
         <% if @order.trouser_styles == nil %>
             <h3><%= link_to 'Add a Trouser_style',new_store_customer_order_trouser_style_path(@store,@customer,@order) %></h3>
