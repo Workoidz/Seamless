@@ -13,7 +13,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Orders ( <%= @customer.customer_name  %> )</h1>
-<a href="<%= new_store_customer_order_path(@store,@customer) %>"><button class="btn btn-xs btn-primary has-icon">New Order</button></a> || <a href="<%= store_customers_path(@store) %>"><button class="btn btn-xs btn-primary has-icon">Back</button></a>
+<a href="<%= new_store_customer_order_path(@store,@customer) %>"><button class="btn btn-xs btn-primary has-icon">Book New Order</button></a> || <a href="<%= store_customers_path(@store) %>"><button class="btn btn-xs btn-primary has-icon">Back</button></a>
 
 <!--<%= link_to 'New Order', new_store_customer_order_path(@store,@customer) %>
 <%= link_to 'Back', store_customers_path(@store) %> -->
