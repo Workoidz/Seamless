@@ -10,6 +10,11 @@
     padding-top: 10px;
   }
 
+  .lm-input-field {
+    height:10px;
+    width:40px;
+  }
+
   
 </style>
 
@@ -35,7 +40,7 @@
     <%= form.label :store_name %> : 
   <!-- </div> -->
   
-    <%= form.text_field :store_name , class: "form-control" %>
+    <%= form.text_field :store_name , class: "form-control lm-input-field" %>
   </div>
   </div>
 
@@ -45,14 +50,14 @@
       <%= form.label :contact_person_name %> :
   <!-- </div> -->
   <!-- <div class=" col-4 col-sm-5 col-md-3"> -->
-      <%= form.text_field :contact_person_name , class: "form-control" %>
+      <%= form.text_field :contact_person_name , class: "form-control lm-input-field" %>
     </div>
     </div>
 
    <div class="form-row"> 
     <div class="col">
       <%= form.label :contact_number %> :
-      <%= form.text_field :contact_number , class: "form-control" %>
+      <%= form.text_field :contact_number , class: "form-control lm-input-field" %>
 
     </div>
   </div>
@@ -60,7 +65,7 @@
   <div class="form-row">  
   <div class="col">
     <%= form.label :address %>
-    <%= form.text_area :address , class: "form-control" %>
+    <%= form.text_area :address , class: "form-control lm-input-field" %>
   </div>
   </div>
 
@@ -77,11 +82,11 @@
   <div class="form-row">  
   <div class="col">
     <%= form.label :email %>
-    <%= form.text_field :email , class: "form-control" %>
+    <%= form.text_field :email , class: "form-control lm-input-field" %>
   </div>
   <div class="col">
     <%= form.label :website %>
-    <%= form.text_field :website ,class: "form-control" %>
+    <%= form.text_field :website ,class: "form-control lm-input-field" %>
   </div>
   </div>
 
