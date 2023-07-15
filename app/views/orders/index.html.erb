@@ -23,45 +23,25 @@
     
     <% @orders.each do |order| %>
 
-      <div class=" order-view card shadow col-11 col-sm-6 col-md-4 col-lg-3">
-        
-        <a class="btn btn-primary" href="<%=store_customer_order_path(@store,@customer,order)%>"><strong><i>Order No : <%= order.id %></i></strong></a><br>
-        <b>Trails Date :</b> <%= order.trail_date %> Status : <%= order.trail_status %> <br>
-        <b>Delivery Date :</b> <%= order.delivery_date %> Status: <%= order.delivery_status %>
-        
-
+      
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-header">
+            Order No : <%= order.id %>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><b>Trails Date :</b> <%= order.trail_date %> Status : <%= order.trail_status %></p>
+            <p class="card-text"><b>Delivery Date :</b> <%= order.delivery_date %> Status: <%= order.delivery_status %></p>
+            <a href="<%=store_customer_order_path(@store,@customer,order)%>" class="btn btn-primary">View Order</a>
+          </div>
+        </div>
       </div>
+
       
     <% end %>
 
 
 
-    <div class="row">
-      <div class="col-sm-6 mb-3 mb-sm-0">
-        <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
 
