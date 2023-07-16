@@ -11,6 +11,13 @@
     <meta name="viewport" content="width=device-width" />
   </head>
 
+  <style>
+  .logout-button {
+    color:brown;
+    padding-left: 10px;
+}
+</style>
+
   <body>
    
 
@@ -53,7 +60,6 @@
               <span class="navbar-text">
                 <span>Logged in as : <b><%= logged_in_employee.employee_name %></b></span>
                 <span class="logout-button"><%= link_to "logout",logout_path %></span>
-                
               </span>
 
               
