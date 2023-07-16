@@ -21,7 +21,7 @@
 
         <div class="row">
 
-        <nav class="navbar bg-dark border-bottom border-bottom-dark fixed-top navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#"><%=logged_in_store.store_name%></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,27 +49,6 @@
               </li>
             </ul>
 
-
-
-
-            # <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            #   <li class="nav-item">
-            #     <a class="nav-link" href="<%=new_store_customer_path(@store)%>">Create New Customer</a>
-            #   </li>
-            #   <li class="nav-item">
-            #     <a class="nav-link" href="<%=store_customers_path(@store)%>"> Show ALL Customers <span class="sr-only">(current)</span></a>
-            #   </li>
-              
-            #   <li class="nav-item">
-            #     <a class="nav-link" href="<%= dashboard_today_deliveries_path %>">Deliveries</a>
-            #   </li>
-            #   <li class="nav-item">
-            #     <a class="nav-link" href="<%=dashboard_today_trails_path%>">Trials</a>
-            #   </li>
-            #   <li class="nav-item">
-            #     <a class="nav-link" href="<%=dashboard_all_path%>">All-Orders</a>
-            #   </li>
-            # </ul>
             
             Logged in as : <b><%= logged_in_employee.employee_name %> <%= link_to "logout",logout_path %></b>
             
