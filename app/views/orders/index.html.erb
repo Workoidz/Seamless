@@ -39,11 +39,11 @@
             Order No : <%= order.id %>
           </div>
           <div class="card-body">
-            <p class="card-text"><b>Trails Date :</b> <%= order.trail_date %> Status : <%= order.trail_status %></p>
-            <p class="card-text"><b>Status :</b> <%= order.trail_status %> Status : <%= order.trail_status %></p>
-            <p class="card-text"><b>Delivery Date :</b> <%= order.delivery_date %> Status: <%= order.delivery_status %></p>
+            <p class="card-text"><b>Trails Date :</b> <%= order.trail_date %> </p>
+            <p class="card-text"><b>Status :</b> <%= order.trail_status %> </p>
             <hr class="my-3">
-            <p class="card-text"><b>Status :</b> <%= order.delivery_status %> Status: <%= order.delivery_status %></p>
+            <p class="card-text"><b>Delivery Date :</b> <%= order.delivery_date %></p>
+            <p class="card-text"><b>Status :</b> <%= order.delivery_status %> </p>
             <a href="<%=store_customer_order_path(@store,@customer,order)%>" class="btn btn-primary">View Order</a>
           </div>
         </div>
