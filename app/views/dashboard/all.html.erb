@@ -11,17 +11,15 @@
   }
 </style>
 
-<div class="container shadow">
-
   <div class="container">
-    <br>
     <%= form_tag(dashboard_search_customer_path, :method => "get") do %>
         <%= label_tag(:search_customer, "Search for Customer (Mobile No.):") %>
         <%= text_field_tag(:search_customer) %>
         <%= submit_tag("Search") %>
     <% end %>
-  </div>
-  <div class="container">
+
+    <br>
+
     <%= form_tag(dashboard_search_order_path, :method => "get") do %>
         <%= label_tag(:search_order, "Search for Order ( Order No. ):") %>
         <%= text_field_tag(:search_order) %>
@@ -30,33 +28,36 @@
   </div>
 	
 	<div class="container">
-	<div class="row">
-		<div class="col-8">
-		  <h1>All Orders</h1>
-		</div>
+    <div class="row">
+      <div class="col-8">
+        <h4>All Orders</h4>
+      </div>
 
-    <div class="col-4">
-      <div class="container">
-        <div class="row"><h6><i>Trail's Done Today : </i><%=@trailed_today%></h6></div>
-        <div class="row"><h6><i>Deliveries Done Today : </i> <%=@delivered_today%></h6></div>
+      <div class="col-4">
+          <div class="row"><h6><i>Trail's Done Today : </i><%=@trailed_today%></h6></div>
+          <div class="row"><h6><i>Deliveries Done Today : </i> <%=@delivered_today%></h6></div>
       </div>
     </div>
-
-    <div class="container">
-   
-     <div class="row">
-    
-      <% @all.each do |order| %>
-
-          <div class=" order-view card shadow col-12 col-sm-6 col-md-4 col-lg-3">
-        
-            <a class="btn btn-primary" href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>"><strong><i>Order No : <%= order.id %></i></strong></a><br>
-            <b>Trail Date :</b> <%= order.trail_date %> Status : <%= order.trail_status %> <br>
-            <b>Delivery Date :</b> <%= order.delivery_date %> Status: <%= order.delivery_status %>
-
-          </div>
-      
-      <% end %>
   </div>
 
-</div>
+  <div class="container-fluid mt-5">
+          <div class="row">
+            <% @all.each do |order| %>
+                <div class="col-sm-3 my-2">
+                  <div class="card order-card">
+                    <div class="card-header">
+                      Order No : <%= order.id %>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text"><b>Trails Date :</b> <%= order.trail_date %> </p>
+                      <p class="card-text"><b>Status :</b> <%= order.trail_status %> </p>
+                      <hr class="my-3">
+                      <p class="card-text"><b>Delivery Date :</b> <%= order.delivery_date %></p>
+                      <p class="card-text"><b>Status :</b> <%= order.delivery_status %> </p>
+                      <a href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>" class="btn btn-dark btn-sm">View Order</a>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+          </div>
+        </div>
