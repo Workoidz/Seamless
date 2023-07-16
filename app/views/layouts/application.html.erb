@@ -50,25 +50,15 @@
                   <a class="nav-link" href="<%=dashboard_all_path%>">All-Orders</a>
                 </li>
               </ul>
-              <span class="navbar-text">
+              <span class="navbar-text" style='float: right;'>
                 <span>Logged in as : <b><%= logged_in_employee.employee_name %></b></span>
-                <span class="logout-button" style="color:#f04747"><%= link_to "logout",logout_path %></span>
+                <span class="logout-button" style='color: #f04747;'><%= link_to "logout",logout_path %></span>
               </span>
 
               
               
               
             </div>
-          </div>
-        </nav>
-
-        <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand">Navbar</a>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </nav>
 
