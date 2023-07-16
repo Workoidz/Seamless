@@ -7,6 +7,10 @@
     border: 2px solid Black;
     margin: 5px;
   }
+
+  .order-card {
+    border-radius: 8px;
+  }
 </style>
 
 
@@ -34,7 +38,7 @@
     <% @orders.each do |order| %>
 
       <div class="col-sm-3 my-2">
-        <div class="card">
+        <div class="card order-card">
           <div class="card-header">
             Order No : <%= order.id %>
           </div>
