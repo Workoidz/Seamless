@@ -12,19 +12,26 @@
 </style>
 
   <div class="container">
-    <%= form_tag(dashboard_search_customer_path, :method => "get") do %>
-        <%= label_tag(:search_customer, "Search for Customer (Mobile No.):") %>
-        <%= text_field_tag(:search_customer) %>
-        <%= submit_tag("Search") %>
-    <% end %>
 
-    <br>
 
-    <%= form_tag(dashboard_search_order_path, :method => "get") do %>
-        <%= label_tag(:search_order, "Search for Order ( Order No. ):") %>
-        <%= text_field_tag(:search_order) %>
-        <%= submit_tag("Search") %>
-    <% end %>
+    <div class="form-row">
+
+      <%= form_tag(dashboard_search_customer_path, :method => "get") do %>
+        <div class="form-group col-md-6">
+          <label for="inputCity">Search for Customer (Mobile No.):</label>
+          <%= text_field_tag(:search_customer) %>
+          <%= submit_tag("Search") %>
+        </div>
+      <% end %>
+      <%= form_tag(dashboard_search_order_path, :method => "get") do %>
+        <div class="form-group col-md-6">
+          <label for="inputState">Search for Order ( Order No. ):</label>
+          <%= text_field_tag(:search_order) %>
+          <%= submit_tag("Search") %>
+        </div>
+      <% end %>
+    </div>
+
   </div>
 	
 	<div class="container">
