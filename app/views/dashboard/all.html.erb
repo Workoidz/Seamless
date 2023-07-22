@@ -20,7 +20,7 @@
       <div class="p-2">
           <div class="form-row">
               <%= form_tag(dashboard_search_customer_path, :method => "get") do %>
-                <div class="form-group col-md-6">
+                <div class="form-group col-sm-12 col-md-6">
                   <label for="inputCity">Search for Customer (Mobile No.):</label>
                   <div class="d-flex">
                     <%= text_field_tag(:search_customer, nil, class: "sl-input") %>
@@ -33,7 +33,7 @@
       <div class="ml-auto p-2">
           <div class="form-row">
             <%= form_tag(dashboard_search_order_path, :method => "get") do %>
-              <div class="form-group col-md-6">
+              <div class="form-group col-sm-12 col-md-6">
                 <label for="inputState">Search for Order ( Order No. ):</label>
                 <div class="d-flex">
                   <%= text_field_tag(:search_order, nil, class: "sl-input") %>
@@ -49,11 +49,11 @@
 	
 	<div class="container-fluid">
     <div class="row">
-      <div class="col-6">
+      <div class="col-md-6 col-sm-12">
         <h4>All Orders</h4>
       </div>
 
-      <div class="col-6 text-right">
+      <div class="col-md-6 col-sm-12 text-right">
           <button type="button" class="btn btn-dark btn-sm">
               Trail's Done Today : <span class="badge badge-light"><%=@trailed_today%></span>
           </button>
