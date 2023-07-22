@@ -18,26 +18,26 @@
 
     <div class="d-flex">
       <div class="p-2">
-        <%= form_tag(dashboard_search_customer_path, :method => "get") do %>
           <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCity">Search for Customer (Mobile No.):</label>
-                <%= text_field_tag(:search_customer) %>
-                <%= submit_tag("Search") %>
-              </div>
+              <%= form_tag(dashboard_search_customer_path, :method => "get") do %>
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Search for Customer (Mobile No.):</label>
+                  <%= text_field_tag(:search_customer) %>
+                  <%= submit_tag("Search") %>
+                </div>
+              <% end %>
             </div>
-        <% end %>
       </div>
       <div class="ml-auto p-2">
-        <%= form_tag(dashboard_search_order_path, :method => "get") do %>
           <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputState">Search for Order ( Order No. ):</label>
-              <%= text_field_tag(:search_order) %>
-              <%= submit_tag("Search") %>
-            </div>
+            <%= form_tag(dashboard_search_order_path, :method => "get") do %>
+              <div class="form-group col-md-6">
+                <label for="inputState">Search for Order ( Order No. ):</label>
+                <%= text_field_tag(:search_order) %>
+                <%= submit_tag("Search") %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
       </div>
     </div>
 
