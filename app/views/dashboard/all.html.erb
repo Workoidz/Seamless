@@ -22,7 +22,7 @@
               <%= form_tag(dashboard_search_customer_path, :method => "get") do %>
                 <div class="form-group col-md-6">
                   <label for="inputCity">Search for Customer (Mobile No.):</label>
-                  <%= text_field_tag(:search_customer) %>
+                  <%= text_field_tag(:search_customer), class: "sl-input" %>
                   <%= submit_tag("Search") %>
                 </div>
               <% end %>
