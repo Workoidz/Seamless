@@ -25,6 +25,15 @@
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+
+  var button = document.getElementById("your-button-id");
+
+  button.addEventListener("click", function() {
+    button.classList.toggle("highlighted-button");
+  });
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -92,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <%= link_to "Logout",logout_path , class: "nav-link logout-button" %>
               </li>
               <li>
-                <button id="your-button-id">Click It Noww</button>
+                <button id="your-button-id">Click It</button>
               </li>
             </ul>
 
