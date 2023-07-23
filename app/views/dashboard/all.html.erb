@@ -11,11 +11,12 @@
   }
 </style>
 
+<script>
+const ele = document.getElementById("testHover");
+ele.style.color = "red";
+</script>
+
   <div class="container">
-
-
-
-
     <div class="row">
       <div class="col-md-6 col-sm-12">
         <div class="p-2">
@@ -48,7 +49,6 @@
         </div>
       </div>
     </div>
-
   </div>
 	
 	<div class="container-fluid">
@@ -56,7 +56,6 @@
       <div class="col-md-6 col-sm-12">
         <h4>All Orders</h4>
       </div>
-
       <div class="col-md-6 col-sm-12 text-right">
           <button type="button" class="btn btn-dark btn-sm">
               Trail's Done Today : <span class="badge badge-light"><%=@trailed_today%></span>
@@ -67,25 +66,24 @@
       </div>
     </div>
   </div>
-
   <div class="container-fluid mt-5">
-          <div class="row">
-            <% @all.each do |order| %>
-                <div class="col-sm-12 col-md-4 col-lg-3 my-2">
-                  <div class="card order-card">
-                    <div class="card-header">
-                      Order No : <%= order.id %>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text"><b>Trails Date :</b> <%= order.trail_date %> </p>
-                      <p class="card-text"><b>Status :</b> <%= order.trail_status %> </p>
-                      <hr class="my-3">
-                      <p class="card-text"><b>Delivery Date :</b> <%= order.delivery_date %></p>
-                      <p class="card-text"><b>Status :</b> <%= order.delivery_status %> </p>
-                      <a href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>" class="btn btn-dark btn-sm">View Order</a>
-                    </div>
-                  </div>
-                </div>
-            <% end %>
+    <div class="row">
+      <% @all.each do |order| %>
+        <div class="col-sm-12 col-md-4 col-lg-3 my-2">
+          <div class="card order-card">
+            <div class="card-header">
+              Order No : <%= order.id %>
+            </div>
+            <div class="card-body">
+              <p class="card-text"><b>Trails Date :</b> <%= order.trail_date %> </p>
+              <p class="card-text"><b>Status :</b> <%= order.trail_status %> </p>
+              <hr class="my-3">
+              <p class="card-text"><b>Delivery Date :</b> <%= order.delivery_date %></p>
+              <p class="card-text"><b>Status :</b> <%= order.delivery_status %> </p>
+              <a href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>" class="btn btn-dark btn-sm" id="testHover">View Order</a>
+            </div>
           </div>
         </div>
+      <% end %>
+    </div>
+  </div>
