@@ -4,7 +4,6 @@
     <title>Lm-Seamless</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -15,6 +14,11 @@
     .highlighted-button {
     background-color: red;
   }
+
+
+  .highlighted {
+    color: red;
+  }
   </style>
 
 <script>
@@ -22,20 +26,20 @@
 
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
-  let ele = document.querySelectorAll(".nav-item");
-  ele.forEach(item => {
-    item.addEventListener("click", ()=> {
-      item.classList.add("active");
+  var listItems = document.querySelectorAll("#my-list li");
+
+  listItems.forEach(function(item) {
+    item.addEventListener("click", function() {
+      listItems.forEach(function(item) {
+        item.classList.remove("highlighted");
+      });
+      this.classList.add("highlighted");
     });
   });
-
-  var button = document.getElementById("your-button-id");
-
-  button.addEventListener("click", function() {
-    button.classList.toggle("highlighted-button");
-  });
 });
+
 
 
 </script>
@@ -60,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto" id="my-list">
               <li class="nav-item active">
                 <a class="nav-link" href="<%=new_store_customer_path(@store)%>">Add New Customers <span class="sr-only">(current)</span></a>
               </li>
@@ -88,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <%= link_to "Logout",logout_path , class: "nav-link logout-button" %>
               </li>
               <li>
-                <button id="your-button-id">Click Me</button>
+                <button id="your-button-id">Click It Noww</button>
               </li>
             </ul>
 
