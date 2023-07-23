@@ -13,7 +13,7 @@
 
   <style>
     .highlighted-button {
-    background-color: blue;
+    background-color: red;
   }
   </style>
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
       item.classList.add("active");
     });
   });
-  
+
   var button = document.getElementById("your-button-id");
 
   button.addEventListener("click", function() {
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <%= link_to "Logout",logout_path , class: "nav-link logout-button" %>
               </li>
               <li>
-                <button id="your-button-id">Click Here</button>
+                <button id="your-button-id">Click Me</button>
               </li>
             </ul>
 
