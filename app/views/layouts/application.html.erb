@@ -11,6 +11,11 @@
     <meta name="viewport" content="width=device-width" />
   </head>
 
+  <style>
+    .highlighted-button {
+    background-color: blue;
+  }
+  </style>
 
 <script>
 
@@ -20,6 +25,14 @@ ele.forEach(item => {
     item.classList.add("active");
   })
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+  var button = document.getElementById("your-button-id");
+
+  button.addEventListener("click", function() {
+    button.classList.toggle("highlighted-button");
+  });
+});
 
 
 </script>
@@ -70,6 +83,9 @@ ele.forEach(item => {
               </li>
               <li class="nav-item">
                 <%= link_to "Logout",logout_path , class: "nav-link logout-button" %>
+              </li>
+              <li>
+                <button id="your-button-id">Click me</button>
               </li>
             </ul>
 
