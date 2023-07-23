@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  var listItems = document.querySelectorAll("#my-list li");
+  var listItems = document.querySelectorAll("#my-list li a");
 
   listItems.forEach(function(item) {
     item.addEventListener("click", function() {
@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
+            <ul class="navbar-nav mr-auto" id="my-list">
+              <li class="nav-item">
                 <a class="nav-link" href="<%=new_store_customer_path(@store)%>">Add New Customers <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
@@ -101,15 +101,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <%= link_to "Logout",logout_path , class: "nav-link logout-button" %>
               </li>
               <li>
-                <button id="your-button-id">Click It</button>
+                <button id="your-button-id">Click Me</button>
               </li>
-            </ul>
-
-
-            <ul id="my-list">
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
             </ul>
 
 
