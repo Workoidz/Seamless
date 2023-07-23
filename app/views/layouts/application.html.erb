@@ -19,12 +19,20 @@
 
 <script>
 
-let ele = document.querySelectorAll(".nav-item");
-ele.forEach(item => {
-  item.addEventListener("click", ()=> {
-    item.classList.add("active");
-  })
-})
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  let ele = document.querySelectorAll(".nav-item");
+  ele.forEach(item => {
+    item.addEventListener("click", ()=> {
+      item.classList.add("active");
+    });
+  });
+});
+
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
   var button = document.getElementById("your-button-id");
