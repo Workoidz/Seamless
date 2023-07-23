@@ -12,8 +12,10 @@
 </style>
 
 <script>
-const ele = document.getElementById("testHover");
-ele.style.color = "red";
+let ele = document.querySelectorAll(".testHover");
+ele.forEach(item => {
+  item.style.color = "red";
+})
 </script>
 
   <div class="container">
@@ -80,7 +82,7 @@ ele.style.color = "red";
               <hr class="my-3">
               <p class="card-text"><b>Delivery Date :</b> <%= order.delivery_date %></p>
               <p class="card-text"><b>Status :</b> <%= order.delivery_status %> </p>
-              <a href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>" class="btn btn-dark btn-sm" id="testHover">View Order</a>
+              <a href="<%=store_customer_order_path(@store,Customer.find( order.customer_id),order)%>" class="btn btn-dark btn-sm testHover">View Order</a>
             </div>
           </div>
         </div>
